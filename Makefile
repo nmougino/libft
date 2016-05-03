@@ -5,27 +5,27 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2016/04/08 18:10:21 by nmougino         ###   ########.fr        #
+#    Created: 2016/04/06 20:45:24 by nmougino          #+#    #+#              #
+#    Updated: 2016/05/03 22:54:35 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #	Compilator - clang est plus sur que gcc
 CC =		clang
 CFLAGS =	-Wall -Wextra -Werror
-ADDFLAGS =
+ADDFLAGS =	-framework OpenGL -framework Appkit
 
 #	Binary
 NAME =
 LIBNAME =	libft.a
-DST =
+DST =		
 
 #	Default rule
-DEFRULE =	glulib
+DEFRULE =	alllib
 
 #	Dossiers utiles
 SRCDIR =	srcs
-INCDIR =	includes
+INCDIR =	../includes
 LIBDIR =	libs
 OBJDIR =	objs
 
@@ -37,6 +37,10 @@ SRC =		ft_abs.c \
 			ft_getlline.c \
 			ft_getnbrline.c \
 			ft_gotoline.c \
+			ft_isalnum.c \
+			ft_isalpha.c \
+			ft_atoi.c \
+			ft_bzero.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
@@ -68,8 +72,8 @@ SRC =		ft_abs.c \
 			ft_putendl.c \
 			ft_putendl_fd.c \
 			ft_putnbr.c \
-			ft_putnbr_fd.c \
 			ft_putnbrendl.c \
+			ft_putnbr_fd.c \
 			ft_putnbrendl_fd.c \
 			ft_putstr.c \
 			ft_putstr_fd.c \
@@ -83,7 +87,6 @@ SRC =		ft_abs.c \
 			ft_strdel.c \
 			ft_strdup.c \
 			ft_strequ.c \
-			ft_strinc.c \
 			ft_striter.c \
 			ft_striteri.c \
 			ft_strjoin.c \
@@ -107,7 +110,7 @@ SRC =		ft_abs.c \
 			ft_swapint.c \
 			ft_tolower.c \
 			ft_toupper.c
-LIB =
+LIB =		ft mlx
 OBJ =		$(SRC:.c=.o)
 
 #	Prefixes
@@ -144,7 +147,7 @@ endef
 default:
 	@echo "\n\n$(GRA)$(GRE)			-*-  MAKEFILE  -*- \n$(BLU)  @nmougino$(DEF)\n"
 	@echo "$(GRA)  DEFAULT RULE EXECUTION  :::  rule $(DEFRULE)$(DEF)"
-	@$(addprefix make ,$(addsuffix $(\n), $(DEFRULE)))
+	@$(addprefix make ,$(DEFRULE))
 	@echo "FIN DU PROGRAMME COMPILATION TERMINEE"
 
 glu: re
@@ -171,7 +174,7 @@ $(OBJDIR):
 
 $(NAME): $(OBJDIR) $(OBJP) deplib
 	@echo "\n$(GRA)$(CYA)@ ++ $(NAME) compilation$(DEF)"
-	$(CC) $(CFLAGS)	-o $@ $(OBJP) -I$(INCDIR) -L$(LIBDIR) $(LLIBP) $(ADDFLAGS)
+	$(CC) $(CFLAGS)	-o $@ $(OBJP) -I$(INCDIR) -L$(LIBDIR) $(LLIBP)
 
 lib: $(OBJDIR) $(OBJP)
 	@echo "\n$(PUR)@ Library indexation$(DEF)"
@@ -180,7 +183,7 @@ lib: $(OBJDIR) $(OBJP)
 
 deplib:
 	$(addprefix make -C ,$(addsuffix /$(\n), $(LIBP)))
-
+	
 #	MrProper's legacy
 clean:
 	@echo "\n$(RED)@ Objects deletion$(DEF)"
@@ -190,4 +193,3 @@ fclean: clean
 	@echo "\n$(RED)@ Binary deletion$(DEF)"
 	@rm -f $(NAME)
 	@rm -f $(LIBNAME)
-
