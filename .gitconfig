@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+	name = nmougino
+	email = nmougino@student.42.fr
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[alias]
+	au = add -u
+	cb = checkout -b
+	cl = clone
+	cm = commit -m
+	co = checkout
+	st = status
+	br = branch
+	me = merge --no-ff -m

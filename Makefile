@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/06 20:45:24 by nmougino          #+#    #+#              #
-#    Updated: 2016/05/03 22:54:35 by nmougino         ###   ########.fr        #
+#    Updated: 2016/05/03 22:55:16 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ ADDFLAGS =	-framework OpenGL -framework Appkit
 #	Binary
 NAME =
 LIBNAME =	libft.a
-DST =		
+DST =		../libs/
 
 #	Default rule
 DEFRULE =	alllib
