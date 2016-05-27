@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/06 20:45:24 by nmougino          #+#    #+#              #
-#    Updated: 2016/05/03 22:55:16 by nmougino         ###   ########.fr        #
+#    Updated: 2016/05/27 11:27:35 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ SRC =		ft_abs.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
 			ft_lstnew.c \
+			ft_max.c \
 			ft_memalloc.c \
 			ft_memccpy.c \
 			ft_memchr.c \
