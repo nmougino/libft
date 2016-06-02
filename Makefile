@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/06 20:45:24 by nmougino          #+#    #+#              #
-#    Updated: 2016/06/02 20:13:46 by nmougino         ###   ########.fr        #
+#    Updated: 2016/06/02 20:37:45 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,6 @@ SRC =		ft_abs.c \
 			ft_memcpy.c \
 			ft_memdel.c \
 			ft_memmove.c \
-			ft_memnloc.c \
 			ft_memset.c \
 			ft_min.c \
 			ft_nbrlen.c \
@@ -101,6 +100,7 @@ SRC =		ft_abs.c \
 			ft_strncpy.c \
 			ft_strnequ.c \
 			ft_strnew.c \
+			ft_strnloc.c \
 			ft_strnstr.c \
 			ft_strrchr.c \
 			ft_strrev.c \

@@ -6,18 +6,18 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/02 20:08:27 by nmougino          #+#    #+#             */
-/*   Updated: 2016/06/02 20:12:17 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/06/02 20:35:51 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_memnloc(char c, void *ptr, int n)
+int		ft_strnloc(char c, char *ptr, int n)
 {
 	int		i;
 
 	i = 0;
 	while (n--)
 	{
-		if (ptr[i] == c)
+		if ((char)ptr[i] == c)
 			return (i);
 		++i;
 	}
