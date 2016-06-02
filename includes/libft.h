@@ -6,7 +6,7 @@
 /*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2016/05/27 11:28:07 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/06/02 20:13:21 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				ft_memdel(void **ap);
 void				*ft_memmove(void *dst, const void *src, size_t len);
+int					ft_memnloc(char c, void *ptr, int n);
 void				*ft_memset(void *b, int c, size_t len);
 int					ft_min(int a, int b);
 int					ft_nbrlen(int nb);
