@@ -6,20 +6,18 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 17:06:58 by nmougino          #+#    #+#             */
-/*   Updated: 2016/06/09 17:32:58 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/06/10 18:43:37 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nbrlenbase(int nb, int base)
+int		ft_nbrlenbase(unsigned long nb, int base)
 {
 	int		i;
 
 	i = 1;
-	if (nb < 0)
-		nb *= -1;
-	while (nb > base)
+	while (nb > (unsigned long)base)
 	{
 		i++;
 		nb /= base;
