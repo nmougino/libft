@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/06 20:45:24 by nmougino          #+#    #+#              #
-#    Updated: 2016/06/09 17:34:29 by nmougino         ###   ########.fr        #
+#    Updated: 2016/06/13 15:55:31 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ SRC =		ft_abs.c \
 			ft_min.c \
 			ft_nbrlen.c \
 			ft_nbrlenbase.c \
+			ft_nbrlenbin.c \
 			ft_pow.c \
 			ft_putchar.c \
 			ft_putchar_fd.c \
