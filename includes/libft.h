@@ -58,7 +58,7 @@ void				*ft_memset(void *b, int c, size_t len);
 int					ft_min(int a, int b);
 int					ft_nbrlen(long nb);
 int					ft_nbrlenbase(unsigned long nb, int base);
-int					ft_nbrlenbin(long p);
+int					ft_bitlen(long p);
 int					ft_pow(int nb, int pow);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);

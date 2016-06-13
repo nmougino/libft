@@ -68,7 +68,7 @@ SRC =		ft_abs.c \
 			ft_min.c \
 			ft_nbrlen.c \
 			ft_nbrlenbase.c \
-			ft_nbrlenbin.c \
+			ft_bitlen.c \
 			ft_pow.c \
 			ft_putchar.c \
 			ft_putchar_fd.c \
