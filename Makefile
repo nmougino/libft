@@ -18,14 +18,14 @@ ADDFLAGS =	-framework OpenGL -framework Appkit
 #	Binary
 NAME =
 LIBNAME =	libft.a
-DST =		../libs/
+DST =		.
 
 #	Default rule
 DEFRULE =	alllib
 
 #	Dossiers utiles
 SRCDIR =	srcs
-INCDIR =	../includes
+INCDIR =	includes
 LIBDIR =	libs
 OBJDIR =	objs
 

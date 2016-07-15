@@ -14,12 +14,5 @@
 
 int		ft_isalpha(int c)
 {
-	int	ans;
-
-	ans = 0;
-	if (ft_isup(c) == 1)
-		ans = 1;
-	else if (ft_islow(c) == 1)
-		ans = 1;
-	return (ans);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

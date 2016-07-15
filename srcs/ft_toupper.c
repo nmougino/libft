@@ -14,7 +14,5 @@
 
 int		ft_toupper(int c)
 {
-	if (ft_islow(c) == 1)
-		c -= ('a' - 'A');
-	return (c);
+	return (ft_islow(c) ? c - ('a' - 'A') : c);
 }

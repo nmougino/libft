@@ -12,10 +12,5 @@
 
 int		ft_isup(int c)
 {
-	int	ans;
-
-	ans = 0;
-	if (c >= 'A' && c <= 'Z')
-		ans = 1;
-	return (ans);
+	return (c >= 'A' && c <= 'Z');
 }

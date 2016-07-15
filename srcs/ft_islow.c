@@ -12,10 +12,5 @@
 
 int		ft_islow(int c)
 {
-	int		ans;
-
-	ans = 0;
-	if (c >= 'a' && c <= 'z')
-		ans = 1;
-	return (ans);
+	return (c >= 'a' && c <= 'z');
 }

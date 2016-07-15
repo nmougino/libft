@@ -12,12 +12,5 @@
 
 int		ft_isprint(int c)
 {
-	int		ans;
-
-	ans = 0;
-	if (c >= ' ' && c <= '?')
-		ans = 1;
-	else if (c >= '@' && c <= '~')
-		ans = 1;
-	return (ans);
+	return ((c >= ' ' && c <= '?') || (c >= '@' && c <= '~'));
 }
