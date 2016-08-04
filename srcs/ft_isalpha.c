@@ -6,7 +6,7 @@
 /*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 15:26:43 by nmougino          #+#    #+#             */
-/*   Updated: 2015/12/07 18:43:35 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/08/04 20:53:50 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 int		ft_isalpha(int c)
 {
-	int	ans;
-
-	ans = 0;
-	if (ft_isup(c) == 1)
-		ans = 1;
-	else if (ft_islow(c) == 1)
-		ans = 1;
-	return (ans);
+	return (((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) ? 1 : 0);
 }

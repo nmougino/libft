@@ -6,16 +6,11 @@
 /*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 18:33:52 by nmougino          #+#    #+#             */
-/*   Updated: 2015/12/07 18:40:22 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/08/04 20:51:22 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_islow(int c)
 {
-	int		ans;
-
-	ans = 0;
-	if (c >= 'a' && c <= 'z')
-		ans = 1;
-	return (ans);
+	return ((c >= 'a' && c <= 'z') ? 1 : 0);
 }
