@@ -5,42 +5,36 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/04/06 20:45:24 by nmougino          #+#    #+#              #
-#    Updated: 2016/06/13 15:55:31 by nmougino         ###   ########.fr        #
+#    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
+#    Updated: 2016/08/04 20:40:57 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #	Compilator - clang est plus sur que gcc
 CC =		clang
 CFLAGS =	-Wall -Wextra -Werror
-ADDFLAGS =	-framework OpenGL -framework Appkit
 
 #	Binary
-NAME =
-LIBNAME =	libft.a
-DST =		../libs/
+NAME =		libft.a
 
 #	Default rule
-DEFRULE =	alllib
+DEFRULE =	all
 
 #	Dossiers utiles
 SRCDIR =	srcs
-INCDIR =	../includes
+INCDIR =	includes
 LIBDIR =	libs
 OBJDIR =	objs
 
 #	Liste des sources
 SRC =		ft_abs.c \
 			ft_atoi.c \
+			ft_bitlen.c \
 			ft_bzero.c \
 			ft_getlinesize.c \
 			ft_getlline.c \
 			ft_getnbrline.c \
 			ft_gotoline.c \
-			ft_isalnum.c \
-			ft_isalpha.c \
-			ft_atoi.c \
-			ft_bzero.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
@@ -68,18 +62,34 @@ SRC =		ft_abs.c \
 			ft_min.c \
 			ft_nbrlen.c \
 			ft_nbrlenbase.c \
-			ft_bitlen.c \
 			ft_pow.c \
+			ft_printf.c \
+			ft_printf_addto.c \
+			ft_printf_applyparams.c \
+			ft_printf_conv.c \
+			ft_printf_conv_b.c \
+			ft_printf_conv_c.c \
+			ft_printf_conv_di.c \
+			ft_printf_conv_hexa.c \
+			ft_printf_conv_mod.c \
+			ft_printf_conv_o.c \
+			ft_printf_conv_p.c \
+			ft_printf_conv_s.c \
+			ft_printf_conv_u.c \
+			ft_printf_conv_uni.c \
+			ft_printf_recupparam.c \
+			ft_printf_setconvparts.c \
 			ft_putchar.c \
 			ft_putchar_fd.c \
 			ft_putendl.c \
 			ft_putendl_fd.c \
 			ft_putnbr.c \
-			ft_putnbrendl.c \
 			ft_putnbr_fd.c \
+			ft_putnbrendl.c \
 			ft_putnbrendl_fd.c \
 			ft_putstr.c \
 			ft_putstr_fd.c \
+			ft_sitoa.c \
 			ft_sqrt.c \
 			ft_stradd.c \
 			ft_strcat.c \
@@ -90,6 +100,7 @@ SRC =		ft_abs.c \
 			ft_strdel.c \
 			ft_strdup.c \
 			ft_strequ.c \
+			ft_strinc.c \
 			ft_striter.c \
 			ft_striteri.c \
 			ft_strjoin.c \
@@ -113,8 +124,10 @@ SRC =		ft_abs.c \
 			ft_swapchar.c \
 			ft_swapint.c \
 			ft_tolower.c \
-			ft_toupper.c
-LIB =		ft mlx
+			ft_toupper.c \
+			ft_uitoabase.c
+
+LIB =
 OBJ =		$(SRC:.c=.o)
 
 #	Prefixes
@@ -145,55 +158,39 @@ endef
 #	RULES
 #
 
-.PHONY = default glu glulib all alllib re relib $(OBJDIR) $(NAME) lib deplib clean fclean
+.PHONY = default glu all re $(OBJDIR) $(NAME) deplib clean fclean
 
 #	Main rules
 default:
-	@echo "\n\n$(GRA)$(GRE)			-*-  MAKEFILE  -*- \n$(BLU)  @nmougino$(DEF)\n"
 	@echo "$(GRA)  DEFAULT RULE EXECUTION  :::  rule $(DEFRULE)$(DEF)"
 	@$(addprefix make ,$(DEFRULE))
-	@echo "FIN DU PROGRAMME COMPILATION TERMINEE"
+	@echo "$(GRE)$(GRA)Programme termine :)$(DEF)"
 
 glu: re
 	make clean
 
-glulib: relib
-	make clean
-
 all: $(NAME)
 
-alllib: lib
-
 re: fclean all
-
-relib: fclean alllib
 
 #	Compilation rules
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS)	-c -o $@ $^ -I$(INCDIR)
 
 $(OBJDIR):
-	@echo "\n$(GRA)$(CYA)@ ++ Objects compilation$(DEF)"
-	mkdir -p $(OBJDIR)
+	@echo "$(GRA)$(CYA)@ ++ Objects compilation$(DEF)"
+	@mkdir -p $(OBJDIR)
 
-$(NAME): $(OBJDIR) $(OBJP) deplib
-	@echo "\n$(GRA)$(CYA)@ ++ $(NAME) compilation$(DEF)"
-	$(CC) $(CFLAGS)	-o $@ $(OBJP) -I$(INCDIR) -L$(LIBDIR) $(LLIBP)
+$(NAME): $(OBJDIR) $(OBJP)
+	@echo "$(PUR)@ Library indexation$(DEF)"
+	@ar rc $(NAME) $(OBJP)
+	@ranlib $(NAME)
 
-lib: $(OBJDIR) $(OBJP)
-	@echo "\n$(PUR)@ Library indexation$(DEF)"
-	ar rc $(DST)$(LIBNAME) $(OBJP)
-	ranlib $(DST)$(LIBNAME)
-
-deplib:
-	$(addprefix make -C ,$(addsuffix /$(\n), $(LIBP)))
-	
 #	MrProper's legacy
 clean:
-	@echo "\n$(RED)@ Objects deletion$(DEF)"
-	rm -rf $(OBJDIR)
+	@echo "$(RED)@ Objects deletion$(DEF)"
+	@rm -rf $(OBJDIR)
 
 fclean: clean
-	@echo "\n$(RED)@ Binary deletion$(DEF)"
+	@echo "$(RED)@ Binary deletion$(DEF)"
 	@rm -f $(NAME)
-	@rm -f $(LIBNAME)

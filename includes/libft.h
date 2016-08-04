@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2016/06/13 15:52:31 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/08/04 20:37:47 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 typedef	struct		s_list
 {
@@ -24,9 +25,10 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_abs(int nb);
+uintmax_t			ft_abs(intmax_t nb);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
+int					ft_bitlen(intmax_t p);
 int					ft_getlinesize(char *buf);
 char				*ft_getlline(char *buf, int l);
 int					ft_getnbrline(char *buf);
@@ -56,8 +58,8 @@ void				ft_memdel(void **ap);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 int					ft_min(int a, int b);
-int					ft_nbrlen(long nb);
-int					ft_nbrlenbase(unsigned long nb, int base);
+int					ft_nbrlen(intmax_t nb);
+int					ft_nbrlenbase(uintmax_t nb, int base);
 int					ft_bitlen(long p);
 int					ft_pow(int nb, int pow);
 void				ft_putchar(char c);
@@ -105,4 +107,109 @@ void				ft_swapchar(char *a, char *b);
 void				ft_swapint(int *a, int *b);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+
+/*
+** PRINTF FUNCTIONS
+*/
+
+# define PRINTF_BUFF_SIZE	500
+
+/*
+** portabilite
+** typedef long long intmax_t;
+** typedef unsigned long long uintmax_t;
+*/
+
+enum				e_hljz
+{
+	E_NO = 0,
+	E_HH,
+	E_H,
+	E_L,
+	E_LL,
+	E_J,
+	E_Z
+};
+
+enum				e_type
+{
+	E_INT = 0,
+	E_CHAR,
+	E_SHORT,
+	E_LONG,
+	E_LLONG,
+	E_INTMAX,
+	E_SIZE_T
+};
+
+enum				e_flags
+{
+	E_SHARP = 1 << 4,
+	E_ZERO = 1 << 3,
+	E_DASH = 1 << 2,
+	E_SPACE = 1 << 1,
+	E_PLUS = 1
+};
+
+typedef struct		s_spec
+{
+	char			flags;
+	int				mfw;
+	int				prec;
+	char			hljz;
+	char			conv;
+}					t_spec;
+
+typedef struct		s_print
+{
+	char			buf[PRINTF_BUFF_SIZE];
+	unsigned int	pos;
+	va_list			ap;
+	void			*convftab[16];
+	int				ans;
+	t_spec			*spec;
+	int				fd;
+}					t_print;
+
+int					ft_printf(const char *format, ...);
+int					ft_dprintf(int fd, const char *format, ...);
+
+void				applyplusspace(t_print *print, t_spec *spec, int s);
+void				applysharp(t_print *print, t_spec *spec);
+void				applymfw(t_print *print, t_spec *spec, int mfw);
+void				applynumprec(t_print *print, t_spec *spec, int len);
+
+void				addto(char c, t_print *print);
+
+int					setflag(t_spec *spec, const char *str);
+int					setmfwi(t_print *print, t_spec *spec, const char *str);
+int					setprec(t_spec *spec, const char *str);
+int					setmodi(t_spec *spec, const char *str);
+int					setconv(t_spec *spec, const char *str);
+
+void				conv_b(t_spec *spec, t_print *print);
+void				conv_s(t_spec *spec, t_print *print);
+void				conv_ls(t_spec *spec, t_print *print);
+void				conv_p(t_spec *spec, t_print *print);
+void				conv_d(t_spec *spec, t_print *print);
+void				conv_ld(t_spec *spec, t_print *print);
+void				conv_i(t_spec *spec, t_print *print);
+void				conv_o(t_spec *spec, t_print *print);
+void				conv_lo(t_spec *spec, t_print *print);
+void				conv_u(t_spec *spec, t_print *print);
+void				conv_lu(t_spec *spec, t_print *print);
+void				conv_x(t_spec *spec, t_print *print);
+void				conv_bx(t_spec *spec, t_print *print);
+void				conv_c(t_spec *spec, t_print *print);
+void				conv_lc(t_spec *spec, t_print *print);
+void				conv_mod(t_spec *spec, t_print *print);
+
+int					conv(t_spec *spec, t_print *print, const char *format);
+
+void				sitoa(intmax_t p, t_print *print, int l);
+void				uitoabase(uintmax_t p, char *base, t_print *print, int l);
+
+intmax_t			recupparam(int type, va_list ap);
+uintmax_t			urecupparam(int type, va_list ap);
+
 #endif
