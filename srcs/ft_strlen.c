@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 17:05:52 by nmougino          #+#    #+#             */
-/*   Updated: 2015/12/01 11:23:32 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/08/04 17:29:53 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ size_t	ft_strlen(const char *s)
 
 	ans = 0;
 	while (s[ans])
-		ans++;
+		++ans;
 	return (ans);
 }

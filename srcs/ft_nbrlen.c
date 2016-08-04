@@ -6,13 +6,13 @@
 /*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:39:23 by nmougino          #+#    #+#             */
-/*   Updated: 2016/06/10 18:41:28 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/08/04 17:28:51 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nbrlen(long nb)
+int		ft_nbrlen(intmax_t nb)
 {
 	int		i;
 
