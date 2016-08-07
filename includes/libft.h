@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2016/08/04 20:37:47 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/08/07 21:11:34 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 typedef	struct		s_list
 {
@@ -211,5 +212,14 @@ void				uitoabase(uintmax_t p, char *base, t_print *print, int l);
 
 intmax_t			recupparam(int type, va_list ap);
 uintmax_t			urecupparam(int type, va_list ap);
+
+
+/*
+** GNL FUNCTIONS
+*/
+
+# define GNL_BUFF_SIZE 1
+
+int					get_next_line(int const fd, char **line);
 
 #endif

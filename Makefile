@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2016/08/04 20:40:57 by nmougino         ###   ########.fr        #
+#    Updated: 2016/08/07 21:09:14 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -125,7 +125,8 @@ SRC =		ft_abs.c \
 			ft_swapint.c \
 			ft_tolower.c \
 			ft_toupper.c \
-			ft_uitoabase.c
+			ft_uitoabase.c \
+			get_next_line.c
 
 LIB =
 OBJ =		$(SRC:.c=.o)
