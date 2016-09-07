@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2016/08/07 21:11:34 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/07 19:02:02 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
 void				ft_strdel(char **as);
 int					ft_strequ(char const *s1, char const *s2);
+char				*ft_strglu(const char **arg, char separator);
 int					ft_strinc(char **ptr, int size, char c);
 char				*ft_strdup(const char *s1);
 void				ft_striter(char *s, void(*f)(char *));

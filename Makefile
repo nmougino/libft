@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2016/08/07 21:09:14 by nmougino         ###   ########.fr        #
+#    Updated: 2016/09/07 19:02:53 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,6 +100,7 @@ SRC =		ft_abs.c \
 			ft_strdel.c \
 			ft_strdup.c \
 			ft_strequ.c \
+			ft_strglu.c \
 			ft_strinc.c \
 			ft_striter.c \
 			ft_striteri.c \
