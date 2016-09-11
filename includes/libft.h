@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/07 19:02:02 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/11 22:29:03 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ void				*ft_memset(void *b, int c, size_t len);
 int					ft_min(int a, int b);
 int					ft_nbrlen(intmax_t nb);
 int					ft_nbrlenbase(uintmax_t nb, int base);
-int					ft_bitlen(long p);
 int					ft_pow(int nb, int pow);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
@@ -213,7 +212,6 @@ void				uitoabase(uintmax_t p, char *base, t_print *print, int l);
 
 intmax_t			recupparam(int type, va_list ap);
 uintmax_t			urecupparam(int type, va_list ap);
-
 
 /*
 ** GNL FUNCTIONS
