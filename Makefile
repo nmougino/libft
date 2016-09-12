@@ -11,8 +11,8 @@
 # **************************************************************************** #
 
 #	Compilator - clang est plus sur que gcc
-CC =		clang
-CFLAGS =	-Wall -Wextra -Werror
+CC =		gcc
+CFLAGS =
 
 #	Binary
 NAME =		libft.a
