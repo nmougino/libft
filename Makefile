@@ -15,7 +15,13 @@ CC =		clang
 CFLAGS =	-Wall -Wextra -Werror
 
 #	Binary
+<<<<<<< HEAD
 NAME =		libft.a
+=======
+NAME =
+LIBNAME =	libft.a
+DST =		.
+>>>>>>> refonte
 
 #	Default rule
 DEFRULE =	all

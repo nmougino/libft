@@ -20,11 +20,11 @@ int		ft_nbrlen(intmax_t nb)
 	if (nb < 0)
 	{
 		nb *= -1;
-		i++;
+		++i;
 	}
 	while (nb > 9)
 	{
-		i++;
+		++i;
 		nb /= 10;
 	}
 	return (i);

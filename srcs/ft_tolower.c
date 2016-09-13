@@ -14,7 +14,5 @@
 
 int		ft_tolower(int c)
 {
-	if (ft_isup(c) == 1)
-		c += ('a' - 'A');
-	return (c);
+	return (ft_isup(c) ? c + ('a' - 'A') : c);
 }

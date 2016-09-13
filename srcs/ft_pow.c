@@ -14,16 +14,14 @@
 
 int		ft_pow(int nb, int pow)
 {
-	int		ans;
-
-	ans = 1;
 	if (nb == 1)
-		ans = 1;
+		return (1);
 	else if (pow == 1)
-		ans = nb;
+		return (nb);
 	else if (pow == 0)
-		ans = 1;
+		return (1);
+	else if (pow < 0)
+		return (0);
 	else
-		ans = ans * nb * ft_pow(nb, pow - 1);
-	return (ans);
+		return (nb * ft_pow(nb, pow - 1));
 }
