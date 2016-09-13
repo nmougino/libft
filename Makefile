@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2016/09/07 19:02:53 by nmougino         ###   ########.fr        #
+#    Updated: 2016/09/13 03:26:51 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,13 +15,8 @@ CC =		clang
 CFLAGS =	-Wall -Wextra -Werror
 
 #	Binary
-<<<<<<< HEAD
 NAME =		libft.a
-=======
-NAME =
-LIBNAME =	libft.a
 DST =		.
->>>>>>> refonte
 
 #	Default rule
 DEFRULE =	all
