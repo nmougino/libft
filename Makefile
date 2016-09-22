@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2016/09/13 03:26:51 by nmougino         ###   ########.fr        #
+#    Updated: 2016/09/22 14:05:17 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -113,6 +113,7 @@ SRC =		ft_abs.c \
 			ft_strncat.c \
 			ft_strncmp.c \
 			ft_strncpy.c \
+			ft_strndup.c \
 			ft_strnequ.c \
 			ft_strnew.c \
 			ft_strnloc.c \
