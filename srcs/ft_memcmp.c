@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 03:53:53 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 01:25:41 by nmougino         ###   ########.fr       */
+/*   Updated: 2015/12/05 01:08:33 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*sa;
-	const unsigned char	*sb;
+	unsigned char	*sa;
+	unsigned char	*sb;
 
-	sa = s1;
-	sb = s2;
+	sa = (unsigned char*)s1;
+	sb = (unsigned char*)s2;
 	while (n--)
 	{
 		if (*sa != *sb)

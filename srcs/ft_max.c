@@ -6,13 +6,11 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/27 11:26:44 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 03:06:53 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/05/27 11:36:37 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-intmax_t	ft_max(intmax_t a, intmax_t b)
+int	ft_max(int a, int b)
 {
 	return ((a >= b) ? a : b);
 }

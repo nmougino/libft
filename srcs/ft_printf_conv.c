@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_conv.c                                   :+:      :+:    :+:   */
+/*   conv.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/02 19:00:03 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 01:42:52 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/06/20 17:43:17 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static int	setspec(t_print *print, t_printf_spec *spec, const char *str)
+static int	setspec(t_print *print, t_spec *spec, const char *str)
 {
 	int		i;
 	int		ans;
@@ -29,10 +29,10 @@ static int	setspec(t_print *print, t_printf_spec *spec, const char *str)
 	return (ans);
 }
 
-int			conv(t_printf_spec *spec, t_print *print, const char *format)
+int			conv(t_spec *spec, t_print *print, const char *format)
 {
-	void	(*convf)(t_printf_spec*, t_print*);
-	int		tmp;
+	int	(*convf)(t_spec*, t_print*);
+	int	tmp;
 
 	if (format[0] == '%')
 	{

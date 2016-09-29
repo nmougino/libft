@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_conv_uni.c                               :+:      :+:    :+:   */
+/*   conv_uni.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:09:48 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 01:41:23 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/06/19 21:43:19 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static int	nboc(int nbbi)
 	return (0);
 }
 
-void		conv_lc(t_printf_spec *spec, t_print *print)
+void		conv_lc(t_spec *spec, t_print *print)
 {
 	wchar_t	p;
 	int		nbbi;
@@ -72,7 +72,7 @@ void		conv_lc(t_printf_spec *spec, t_print *print)
 	((spec->flags & E_DASH)) ? applymfw(print, spec, spec->mfw) : 0;
 }
 
-void		conv_ls(t_printf_spec *spec, t_print *print)
+void		conv_ls(t_spec *spec, t_print *print)
 {
 	wchar_t	*p;
 	int		i;

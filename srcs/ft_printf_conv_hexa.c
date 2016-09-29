@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_conv_hexa.c                              :+:      :+:    :+:   */
+/*   conv_hexa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:07:00 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 17:46:21 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/08/02 12:30:53 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	conv_x(t_printf_spec *spec, t_print *print)
+void	conv_x(t_spec *spec, t_print *print)
 {
 	intmax_t	i;
 	intmax_t	j;
@@ -36,7 +36,7 @@ void	conv_x(t_printf_spec *spec, t_print *print)
 		applymfw(print, spec, spec->mfw);
 }
 
-void	conv_bx(t_printf_spec *spec, t_print *print)
+void	conv_bx(t_spec *spec, t_print *print)
 {
 	intmax_t	i;
 	intmax_t	j;

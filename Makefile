@@ -6,18 +6,17 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2016/09/29 03:12:49 by nmougino         ###   ########.fr        #
+#    Updated: 2016/09/22 14:05:17 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #	Compilator - clang est plus sur que gcc
 CC =		clang
 CFLAGS =	-Wall -Wextra -Werror
-ADDFLAGS =	-Weverything
-#-Wno-padded -fsanitize=address -g3 
 
 #	Binary
 NAME =		libft.a
+DST =		.
 
 #	Default rule
 DEFRULE =	all
@@ -50,6 +49,7 @@ SRC =		ft_abs.c \
 			ft_lstdel.c \
 			ft_lstdelone.c \
 			ft_lstiter.c \
+			ft_lstmap.c \
 			ft_lstnew.c \
 			ft_max.c \
 			ft_memalloc.c \
@@ -165,8 +165,9 @@ endef
 
 #	Main rules
 default:
-	@echo "$(GRA)default  :::  rule $(DEFRULE)$(DEF)"
+	@echo "$(GRA)  DEFAULT RULE EXECUTION  :::  rule $(DEFRULE)$(DEF)"
 	@$(addprefix make ,$(DEFRULE))
+	@echo "$(GRE)$(GRA)Programme termine :)$(DEF)"
 
 glu: re
 	make clean
@@ -177,7 +178,7 @@ re: fclean all
 
 #	Compilation rules
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CFLAGS) $(ADDFLAGS) -c -o $@ $^ -I$(INCDIR)
+	$(CC) $(CFLAGS)	-c -o $@ $^ -I$(INCDIR)
 
 $(OBJDIR):
 	@echo "$(GRA)$(CYA)@ ++ Objects compilation$(DEF)"

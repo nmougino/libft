@@ -6,11 +6,9 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 11:29:37 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 01:09:46 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/13 03:18:30 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_isprint(int c)
 {

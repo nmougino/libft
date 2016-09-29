@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_applyparams.c                            :+:      :+:    :+:   */
+/*   applyparams.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:10:04 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 17:44:14 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/06/20 23:34:58 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	applysharp(t_print *print, t_printf_spec *spec)
+void	applysharp(t_print *print, t_spec *spec)
 {
 	if (spec->flags & (1 << 4))
 	{
@@ -26,7 +26,7 @@ void	applysharp(t_print *print, t_printf_spec *spec)
 	}
 }
 
-void	applyplusspace(t_print *print, t_printf_spec *spec, int s)
+void	applyplusspace(t_print *print, t_spec *spec, int s)
 {
 	if (!s)
 		addto('-', print);
@@ -38,15 +38,15 @@ void	applyplusspace(t_print *print, t_printf_spec *spec, int s)
 		--spec->mfw;
 }
 
-void	applymfw(t_print *print, t_printf_spec *spec, intmax_t mfw)
+void	applymfw(t_print *print, t_spec *spec, int mfw)
 {
 	while (mfw-- > 0)
 		addto(spec->flags & (1 << 3) ? '0' : ' ', print);
 }
 
-void	applynumprec(t_print *print, t_printf_spec *spec, size_t len)
+void	applynumprec(t_print *print, t_spec *spec, int len)
 {
-	while (((size_t)spec->prec - len) > 0)
+	while ((spec->prec - len) > 0)
 	{
 		addto('0', print);
 		spec->prec--;

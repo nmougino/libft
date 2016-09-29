@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_conv_u.c                                 :+:      :+:    :+:   */
+/*   conv_u.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:08:56 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 01:41:21 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/08/02 13:40:33 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	conv_u(t_printf_spec *spec, t_print *print)
+void	conv_u(t_spec *spec, t_print *print)
 {
 	uintmax_t	p;
 
@@ -27,7 +27,7 @@ void	conv_u(t_printf_spec *spec, t_print *print)
 	}
 }
 
-void	conv_lu(t_printf_spec *spec, t_print *print)
+void	conv_lu(t_spec *spec, t_print *print)
 {
 	spec->hljz = ((spec->flags == E_L) ? E_LL : E_L);
 	spec->conv = 'u';
