@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 18:18:06 by nmougino          #+#    #+#             */
-/*   Updated: 2015/12/01 11:22:35 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 01:26:43 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	while (n--)
-		((char *)dst)[n] = ((char *)src)[n];
+		((char *)dst)[n] = ((const char *)src)[n];
 	return (dst);
 }

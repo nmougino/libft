@@ -6,13 +6,13 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/31 18:09:25 by nmougino          #+#    #+#             */
-/*   Updated: 2016/08/03 19:34:20 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 01:29:04 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	initprint(t_print *print, t_spec *spec)
+static void	initprint(t_print *print, t_printf_spec *spec)
 {
 	print->convftab[0] = &conv_s;
 	print->convftab[1] = &conv_ls;
@@ -51,7 +51,7 @@ int			ft_printf(const char *format, ...)
 	int				i;
 	int				tmp;
 	t_print			print;
-	t_spec			spec;
+	t_printf_spec	spec;
 
 	i = 0;
 	va_start(print.ap, format);
@@ -77,7 +77,7 @@ int			ft_dprintf(int fd, const char *format, ...)
 	int				i;
 	int				tmp;
 	t_print			print;
-	t_spec			spec;
+	t_printf_spec	spec;
 
 	i = 0;
 	va_start(print.ap, format);

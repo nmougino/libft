@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_o.c                                           :+:      :+:    :+:   */
+/*   ft_printf_conv_o.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:08:12 by nmougino          #+#    #+#             */
-/*   Updated: 2016/06/20 18:54:21 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 01:41:12 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	conv_o(t_spec *spec, t_print *print)
+void	conv_o(t_printf_spec *spec, t_print *print)
 {
 	int			i;
 	uintmax_t	p;
@@ -32,7 +32,7 @@ void	conv_o(t_spec *spec, t_print *print)
 	(spec->flags & E_DASH) ? applymfw(print, spec, spec->mfw) : 0;
 }
 
-void	conv_lo(t_spec *spec, t_print *print)
+void	conv_lo(t_printf_spec *spec, t_print *print)
 {
 	spec->hljz = ((spec->flags == E_L) ? E_LL : E_L);
 	spec->conv = 'o';

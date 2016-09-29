@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_getlinesize.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 05:13:05 by nmougino          #+#    #+#             */
-/*   Updated: 2015/12/09 12:12:40 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 01:06:15 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_getlinesize(char *buf)
+#include "libft.h"
+
+size_t	ft_getlinesize(char *buf)
 {
-	int		ans;
+	size_t	ans;
 
 	ans = 0;
 	while (*buf && *buf != '\n')

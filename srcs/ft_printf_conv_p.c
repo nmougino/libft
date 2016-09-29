@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_p.c                                           :+:      :+:    :+:   */
+/*   ft_printf_conv_p.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:06:00 by nmougino          #+#    #+#             */
-/*   Updated: 2016/08/02 13:51:56 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 01:41:13 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	conv_p(t_spec *spec, t_print *print)
+void	conv_p(t_printf_spec *spec, t_print *print)
 {
 	int			j;
 	uintmax_t	p;

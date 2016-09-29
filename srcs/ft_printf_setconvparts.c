@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   setconvparts.c                                     :+:      :+:    :+:   */
+/*   ft_printf_setconvparts.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/02 19:02:45 by nmougino          #+#    #+#             */
-/*   Updated: 2016/06/20 17:43:35 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 01:41:28 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	setflag(t_spec *spec, const char *str)
+int	setflag(t_printf_spec *spec, const char *str)
 {
 	int i;
 
@@ -41,7 +41,7 @@ int	setflag(t_spec *spec, const char *str)
 	return (i);
 }
 
-int	setmfwi(t_print *print, t_spec *spec, const char *str)
+int	setmfwi(t_print *print, t_printf_spec *spec, const char *str)
 {
 	int		i;
 
@@ -62,7 +62,7 @@ int	setmfwi(t_print *print, t_spec *spec, const char *str)
 	return (i);
 }
 
-int	setprec(t_spec *spec, const char *str)
+int	setprec(t_printf_spec *spec, const char *str)
 {
 	int		i;
 
@@ -83,7 +83,7 @@ int	setprec(t_spec *spec, const char *str)
 	return (i);
 }
 
-int	setmodi(t_spec *spec, const char *str)
+int	setmodi(t_printf_spec *spec, const char *str)
 {
 	int		i;
 
@@ -101,7 +101,7 @@ int	setmodi(t_spec *spec, const char *str)
 	return (i);
 }
 
-int	setconv(t_spec *spec, const char *str)
+int	setconv(t_printf_spec *spec, const char *str)
 {
 	int		i;
 

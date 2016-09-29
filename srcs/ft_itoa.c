@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:23:37 by nmougino          #+#    #+#             */
-/*   Updated: 2015/12/07 22:52:37 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 01:12:44 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_itoa_doit(char *ans, int len, int nb)
+static void	ft_itoa_doit(char *ans, size_t len, int nb)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	ans[len] = '\0';
@@ -61,7 +61,7 @@ static char	*ft_minint(void)
 char		*ft_itoa(int nb)
 {
 	char	*ans;
-	int		len;
+	size_t	len;
 
 	ans = NULL;
 	len = 0;

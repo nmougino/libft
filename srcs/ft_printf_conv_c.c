@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_c.c                                           :+:      :+:    :+:   */
+/*   ft_printf_conv_c.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:06:04 by nmougino          #+#    #+#             */
-/*   Updated: 2016/06/12 19:19:01 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 02:30:57 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	conv_c(t_spec *spec, t_print *print)
+void	conv_c(t_printf_spec *spec, t_print *print)
 {
 	intmax_t	p;
 
@@ -24,8 +24,10 @@ void	conv_c(t_spec *spec, t_print *print)
 	else
 	{
 		p = recupparam(spec->hljz, print->ap);
-		(!(spec->flags & E_DASH)) ? applymfw(print, spec, spec->mfw - 1) : 0;
-		addto(p, print);
-		(spec->flags & E_DASH) ? applymfw(print, spec, spec->mfw) : 0;
+		if (!(spec->flags & E_DASH))
+			applymfw(print, spec, spec->mfw - 1);
+		addto((char)p, print);
+		if (spec->flags & E_DASH)
+			applymfw(print, spec, spec->mfw);
 	}
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_s.c                                           :+:      :+:    :+:   */
+/*   ft_printf_conv_s.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:05:54 by nmougino          #+#    #+#             */
-/*   Updated: 2016/06/19 21:44:00 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 01:41:20 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		conv_s(t_spec *spec, t_print *print)
+void		conv_s(t_printf_spec *spec, t_print *print)
 {
 	int		i;
 	int		neg;
