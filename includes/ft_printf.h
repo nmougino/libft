@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 03:03:56 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 17:44:29 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int					ft_dprintf(int fd, const char *format, ...);
 
 void				applyplusspace(t_print *print, t_printf_spec *spec, int s);
 void				applysharp(t_print *print, t_printf_spec *spec);
-void				applymfw(t_print *print, t_printf_spec *spec, int mfw);
+void				applymfw(t_print *print, t_printf_spec *spec, intmax_t mfw);
 void				applynumprec(t_print *print, t_printf_spec *spec,
 					size_t len);
 

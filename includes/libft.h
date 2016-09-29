@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/29 03:07:02 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/09/29 17:39:35 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 intmax_t			ft_min(intmax_t a, intmax_t b);
 size_t				ft_nbrlen(intmax_t nb);
-int					ft_nbrlenbase(uintmax_t nb, int base);
+size_t				ft_nbrlenbase(uintmax_t nb, int base);
 int					ft_pow(int nb, int pow);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
