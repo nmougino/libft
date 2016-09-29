@@ -113,7 +113,6 @@ SRC =		ft_abs.c \
 			ft_strncat.c \
 			ft_strncmp.c \
 			ft_strncpy.c \
-			ft_strndup.c \
 			ft_strnequ.c \
 			ft_strnew.c \
 			ft_strnloc.c \

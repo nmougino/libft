@@ -6,7 +6,7 @@
 /*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 18:02:03 by nmougino          #+#    #+#             */
-/*   Updated: 2016/09/22 13:39:33 by nmougino         ###   ########.fr       */
+/*   Updated: 2015/11/26 18:26:10 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	char	*str;
-
-	str = (char *)malloc(size + 1);
-	ft_bzero(str, size + 1);
-	return (str);
+	return ((char*)ft_memalloc(size + 1));
 }
