@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 18:02:03 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/21 00:38:51 by nmougino         ###   ########.fr       */
+/*   Created: 2015/11/27 07:42:21 by nmougino          #+#    #+#             */
+/*   Updated: 2016/10/20 17:10:45 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Alloue (avec malloc(3)) et retourne une chaine de caractère
-** terminée par un ’\0’. Chaque caractère de la chaine
-** est initialisé à ’\0’.
-** Si l’allocation echoue, la fonction renvoie NULL;
+** Applique la fonction f à chaque caractère de la chaine de
+** caractères passée en paramètre en précisant son index pour
+** créer une nouvelle chaine allouee résultant
+** des applications successives de f.
 */
 
-char	*ft_strnew(size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
+	unsigned int	i;
+	char			*ans;
 
-	if (!(str = malloc(size + 1)))
+	i = 0;
+	if (!(ans = malloc(sizeof(char) * ft_strlen(s) + 1)))
 		return (NULL);
-	ft_bzero(str, size + 1);
-	return (str);
+	while (s[i])
+	{
+		ans[i] = f(i, s[i]);
+		++i;
+	}
+	ans[i] = '\0';
+	return (ans);
 }

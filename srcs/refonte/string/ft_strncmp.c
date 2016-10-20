@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 06:34:00 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/20 15:31:33 by nmougino         ###   ########.fr       */
+/*   Created: 2015/11/29 03:56:35 by nmougino          #+#    #+#             */
+/*   Updated: 2016/10/20 15:39:15 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Prend en paramètre l’adresse d’une chaine de caractères qui
-** doit être libérée avec free(3) et son pointeur mis à NULL.
-*/
-
-void	ft_strdel(char **as)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (*as)
-	{
-		free(*as);
-		*as = NULL;
-	}
+	size_t	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n)
+		i++;
+	return ((i < n) && ((unsigned char)(s1[i]) - (unsigned char)(s2[i])));
 }

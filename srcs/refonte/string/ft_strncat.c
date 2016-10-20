@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 06:34:00 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/20 15:31:33 by nmougino         ###   ########.fr       */
+/*   Created: 2015/11/25 18:08:01 by nmougino          #+#    #+#             */
+/*   Updated: 2015/12/15 19:23:00 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Prend en paramètre l’adresse d’une chaine de caractères qui
-** doit être libérée avec free(3) et son pointeur mis à NULL.
-*/
-
-void	ft_strdel(char **as)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	if (*as)
-	{
-		free(*as);
-		*as = NULL;
-	}
+	char	*ptr;
+
+	ptr = s1 + ft_strlen(s1);
+	while (*s2 && n--)
+		*ptr++ = *s2++;
+	*ptr = '\0';
+	return (s1);
 }

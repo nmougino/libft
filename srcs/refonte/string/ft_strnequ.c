@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 06:34:00 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/20 15:31:33 by nmougino         ###   ########.fr       */
+/*   Created: 2015/11/27 07:49:59 by nmougino          #+#    #+#             */
+/*   Updated: 2016/10/20 15:23:33 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Prend en paramètre l’adresse d’une chaine de caractères qui
-** doit être libérée avec free(3) et son pointeur mis à NULL.
+** Compare lexicographiquement s1 et s2 sur n caracteres.
+** Si les deux chaines sont égales, la fonction retourne 1, ou 0 sinon.
 */
 
-void	ft_strdel(char **as)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	if (*as)
+	size_t	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && i < n)
 	{
-		free(*as);
-		*as = NULL;
+		if (s1[i] != s2[i])
+			return (0);
+		++i;
 	}
+	if (s1[i - 1] != s2[i - 1])
+		return (0);
+	return (1);
 }
