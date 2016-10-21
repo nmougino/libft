@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 18:18:06 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/21 14:46:10 by nmougino         ###   ########.fr       */
+/*   Created: 2016/05/27 11:26:44 by nmougino          #+#    #+#             */
+/*   Updated: 2016/05/27 11:36:37 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_max(int a, int b)
 {
-	while (n--)
-		((char *)dst)[n] = ((const char *)src)[n];
-	return (dst);
+	return ((a >= b) ? a : b);
 }
