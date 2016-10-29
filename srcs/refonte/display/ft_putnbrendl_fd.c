@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbrendl_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/17 01:55:43 by nmougino          #+#    #+#             */
-/*   Updated: 2015/12/17 01:56:06 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/10/29 17:38:57 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putnbrendl_fd(int n, int fd)
 			n *= -1;
 		}
 		if (n < 10)
-			ft_putchar_fd('0' + n, fd);
+			ft_putchar_fd('0' + (char)n, fd);
 		else
 		{
 			ft_putnbr_fd(n / 10, fd);

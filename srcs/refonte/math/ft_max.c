@@ -6,9 +6,11 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/27 11:26:44 by nmougino          #+#    #+#             */
-/*   Updated: 2016/05/27 11:36:37 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/10/29 17:24:58 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_max(int a, int b)
 {
