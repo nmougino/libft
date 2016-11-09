@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2016/11/09 15:16:47 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/11/09 21:54:35 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void				ft_lstadd_top(t_list **alst, t_list *new);
 void				ft_lstadd_end(t_list **alst, t_list *new);
 void				ft_lstadd_sort(t_list **alst, t_list *new, int (*sfun)(void *, void *));
 
-void				pourri(int lol);
 int					ft_abs(int nb);
 intmax_t			ft_absmax(intmax_t nb);
 char				*ft_arrglu(char **arg, char *separator, size_t size);
@@ -39,6 +38,7 @@ size_t				ft_arrlen(void *a, size_t type);
 int					ft_atoi(const char *str);
 size_t				ft_bitlen(uintmax_t p);
 void				ft_bzero(void *s, size_t n);
+extern void			ft_free(void *ptr);
 int					ft_getlinesize(char *buf);
 char				*ft_getlline(char *buf, int l);
 int					ft_getnbrline(char *buf);

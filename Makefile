@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2016/11/09 15:21:48 by nmougino         ###   ########.fr        #
+#    Updated: 2016/11/09 22:01:18 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ OBJDIR =	objs
 DETDIR =	array display list math memory misc printf string
 
 #	Liste des sources
-SRC =		array/ft_arrglu.c\
+SRC =		array/ft_arrglu.c \
 			array/ft_arrlen.c \
 			display/ft_putchar.c \
 			display/ft_putchar_fd.c \
@@ -59,6 +59,7 @@ SRC =		array/ft_arrglu.c\
 			math/ft_nbrlen.c \
 			math/ft_nbrlenbase.c \
 			math/ft_nbrlenbasemax.c \
+			math/ft_nbrlenmax.c \
 			math/ft_pow.c \
 			math/ft_sqrt.c \
 			math/ft_tolower.c \
@@ -71,6 +72,7 @@ SRC =		array/ft_arrglu.c\
 			memory/ft_memmove.c \
 			memory/ft_memset.c \
 			misc/ft_atoi.c \
+			misc/ft_free.c \
 			misc/ft_isalnum.c \
 			misc/ft_isalpha.c \
 			misc/ft_isascii.c \
@@ -182,8 +184,8 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 
 $(OBJDIR):
 	@echo "$(GRA)$(CYA)@ ++ Objects compilation$(DEF)"
-	mkdir -p $(OBJDIR)
-	mkdir -p $(addprefix "$(OBJDIR)/", $(DETDIR))
+	@mkdir -p $(OBJDIR)
+	@mkdir -p $(addprefix "$(OBJDIR)/", $(DETDIR))
 
 $(NAME): $(OBJDIR) $(OBJP)
 	@echo "$(PUR)@ Library indexation$(DEF)"
