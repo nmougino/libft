@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmougino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 21:07:24 by nmougino          #+#    #+#             */
-/*   Updated: 2016/08/07 21:12:48 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/10/29 17:53:21 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_fillline(char *buftab, char **line, int param)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (buftab[i] && buftab[i] != '\n')
@@ -29,7 +29,7 @@ static int	ft_fillline(char *buftab, char **line, int param)
 	return (0);
 }
 
-static void	ft_bufjoin(char **buftab, char *ptr)
+static void	*ft_bufjoin(char **buftab, char *ptr)
 {
 	char	*tmp;
 
@@ -37,6 +37,7 @@ static void	ft_bufjoin(char **buftab, char *ptr)
 	ft_strdel(buftab);
 	free(ptr);
 	*buftab = tmp;
+	return (NULL);
 }
 
 int			get_next_line(int const fd, char **line)
@@ -52,7 +53,7 @@ int			get_next_line(int const fd, char **line)
 		if (buftab[fd] && *buftab[fd] && ft_fillline(buftab[fd], line, 0) == 1)
 			return (1);
 		ptr = ft_strnew(GNL_BUFF_SIZE);
-		if ((i = read(fd, ptr, GNL_BUFF_SIZE)) <= 0)
+		if ((i = (int)read(fd, ptr, GNL_BUFF_SIZE)) <= 0)
 		{
 			if (buftab[fd] && *buftab[fd])
 			{
