@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:23:37 by nmougino          #+#    #+#             */
-/*   Updated: 2016/11/12 18:38:44 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/11/12 18:40:08 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ static void	ft_itoa_doit(char *ans, size_t len, int nb)
 	{
 		ans[i] = '-';
 		nb *= -1;
-		i++;
+		++i;
 	}
-	len--;
+	--len;
 	while (i <= len)
 	{
 		ans[len] = (nb % 10) + '0';
 		nb /= 10;
-		len--;
+		--len;
 	}
 }
 
@@ -43,8 +43,8 @@ char		*ft_itoa(int nb)
 	if (nb == -2147483648)
 		return (ft_strdup("-2147483648"));
 	len = ft_nbrlen(nb);
-	ans = malloc((sizeof(char)) * (len + 1));
-	if (ans)
-		ft_itoa_doit(ans, len, nb);
+	if (!(ans = malloc((sizeof(char)) * (len + 1))))
+		return (NULL);
+	ft_itoa_doit(ans, len, nb);
 	return (ans);
 }
