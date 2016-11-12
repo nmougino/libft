@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 09:36:41 by nmougino          #+#    #+#             */
-/*   Updated: 2016/11/12 17:54:33 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/11/12 18:15:10 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,20 @@
 
 char	*ft_strtrim(const char *s)
 {
-	int		i;
+	size_t	i;
 	char	*ret;
 
 	if (!s)
 		return (NULL);
-	while (*s == ' ' || *s == '\n' || *s == '\t')
+	while (*s && (*s == ' ' || *s == '\n' || *s == '\t'))
 		++s;
+	if (!(*s))
+		return (ft_strnew(0));
 	i = ft_strlen(s) - 1;
-	while (i >= 0 && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
+	while (i && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
 		--i;
+	if (i == 0 && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
+		return (NULL);
 	++i;
 	ret = ft_strnew(i);
 	ft_strncpy(ret, s, i);
