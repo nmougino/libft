@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:09:48 by nmougino          #+#    #+#             */
-/*   Updated: 2016/11/06 15:22:17 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/11/12 17:55:19 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void		adduni(wchar_t p, size_t nbbi, t_print *print)
 	}
 }
 
-static int	ft_wstrlen(wchar_t *p)
+static int		ft_wstrlen(wchar_t *p)
 {
 	int	i;
 

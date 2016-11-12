@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 19:07:26 by nmougino          #+#    #+#             */
-/*   Updated: 2016/11/09 15:15:16 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/11/12 17:55:33 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	di_tmp(t_spec *sp, t_print *pr, intmax_t p)
 		--sp->mfw;
 }
 
-void	conv_d(t_spec *sp, t_print *pr)
+void		conv_d(t_spec *sp, t_print *pr)
 {
 	int			i;
 	int			j;
@@ -46,7 +46,7 @@ void	conv_d(t_spec *sp, t_print *pr)
 		applymfw(pr, sp, sp->mfw + (p >= 0) - (sp->flags & 3) && (p > 0));
 }
 
-void	conv_i(t_spec *sp, t_print *pr)
+void		conv_i(t_spec *sp, t_print *pr)
 {
 	int			i;
 	int			j;
@@ -72,7 +72,7 @@ void	conv_i(t_spec *sp, t_print *pr)
 		applymfw(pr, sp, sp->mfw + (p >= 0) - (sp->flags & 3) && (p > 0));
 }
 
-void	conv_ld(t_spec *sp, t_print *print)
+void		conv_ld(t_spec *sp, t_print *print)
 {
 	sp->hljz = ((sp->flags == E_L) ? E_LL : E_L);
 	sp->conv = 'd';

@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 18:13:23 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/20 23:43:55 by nmougino         ###   ########.fr       */
+/*   Updated: 2016/11/12 17:57:35 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	t = (unsigned char*)s;
 	while (n > 8)
 	{
-	 	*(unsigned long *)((unsigned long)t) = 0;
+		*(unsigned long *)((unsigned long)t) = 0;
 		t += 8;
 		n -= 8;
 	}
