@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 07:49:59 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/20 15:23:33 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/01/26 20:15:07 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,16 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!n)
+		return (1);
+	if (!s1)
+	{
+		if (!s2)
+			return (1);
+		return (0);
+	}
+	if (!s2)
+		return (0);
 	while (s1[i] && s2[i] && i < n)
 	{
 		if (s1[i] != s2[i])
