@@ -12,7 +12,7 @@
 
 #	Compilator - clang est plus sur que gcc
 CC =		clang
-CFLAGS =	-Wall -Wextra -Werror -Weverything
+CFLAGS =	-Weverything
 
 #	Binary
 NAME =		libft.a
@@ -180,7 +180,7 @@ re: fclean all
 
 #	Compilation rules
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CFLAGS)	-c -o $@ $^ -I$(INCDIR)
+	$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR)
 
 $(OBJDIR):
 	@echo "$(GRA)$(CYA)@ ++ Objects compilation$(DEF)"
