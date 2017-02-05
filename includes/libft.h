@@ -25,8 +25,8 @@
 ** portabilite
 */
 
-typedef long long intmax_t;
-typedef unsigned long long uintmax_t;
+typedef long int intmax_t;
+typedef unsigned long int uintmax_t;
 
 typedef	struct		s_list
 {
