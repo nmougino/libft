@@ -20,6 +20,14 @@
 # include <fcntl.h>
 # include "ft_printf.h"
 
+
+/*
+** portabilite
+*/
+
+typedef long long intmax_t;
+typedef unsigned long long uintmax_t;
+
 typedef	struct		s_list
 {
 	void			*content;
