@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/02/08 22:07:45 by nmougino         ###   ########.fr        #
+#    Updated: 2017/02/17 17:40:01 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC =		array/ft_arrglu.c \
 			display/ft_putchar_fd.c \
 			display/ft_putendl.c \
 			display/ft_putendl_fd.c \
+			display/ft_putline.c \
 			display/ft_putnbr.c \
 			display/ft_putnbr_fd.c \
 			display/ft_putnbrendl.c \
@@ -103,6 +104,10 @@ SRC =		array/ft_arrglu.c \
 			printf/setconvparts.c \
 			printf/sitoa.c \
 			printf/uitoabase.c \
+			string/ft_getlinesize.c \
+			string/ft_getlline.c \
+			string/ft_getnbrline.c \
+			string/ft_gotoline.c \
 			string/ft_stradd.c \
 			string/ft_strcat.c \
 			string/ft_strchr.c \

@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/08 22:10:10 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/17 17:41:30 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,6 @@ int					ft_atoi(const char *str);
 size_t				ft_bitlen(uintmax_t p);
 void				ft_bzero(void *s, size_t n);
 extern void			ft_free(void *ptr);
-int					ft_getlinesize(char *buf);
-char				*ft_getlline(char *buf, int l);
-int					ft_getnbrline(char *buf);
-char				*ft_gotoline(char *buf, int l);
 int					ft_isalpha(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
@@ -91,6 +87,7 @@ void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbrendl(int n);
 void				ft_putnbrendl_fd(int n, int fd);
+void				ft_putline(char *str);
 void				ft_putstr(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
 float				ft_sqrt(float nb);
@@ -126,6 +123,10 @@ char				*ft_strstr(const char *s1, const char *s2);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
+size_t				ft_getlinesize(char *buf);
+char				*ft_getlline(char *buf, int l);
+int					ft_getnbrline(char *buf);
+char				*ft_gotoline(char *buf, int l);
 void				ft_swapchar(char *a, char *b);
 void				ft_swapint(int *a, int *b);
 int					ft_tolower(int c);
