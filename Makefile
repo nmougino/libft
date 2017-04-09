@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/02/17 17:40:01 by nmougino         ###   ########.fr        #
+#    Updated: 2017/04/09 17:47:13 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,6 +108,7 @@ SRC =		array/ft_arrglu.c \
 			string/ft_getlline.c \
 			string/ft_getnbrline.c \
 			string/ft_gotoline.c \
+			string/ft_move_left.c \
 			string/ft_stradd.c \
 			string/ft_strcat.c \
 			string/ft_strchr.c \
@@ -187,7 +188,8 @@ re: fclean all
 
 #	Compilation rules
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR)
+	@echo "$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR)" | lolcat
+	@$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR)
 
 $(OBJDIR):
 	@echo "$(GRA)$(CYA)@ ++ Objects compilation$(DEF)"
