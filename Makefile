@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/04/10 19:19:22 by nmougino         ###   ########.fr        #
+#    Updated: 2017/04/10 19:27:45 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ OBJDIR =	objs
 DETDIR =	array display list math memory misc printf string
 
 #	Liste des sources
-SRC =		array/ft_arrglu.c \
+SRC =		array/ft_arrdel.c \
+			array/ft_arrglu.c \
 			array/ft_arrlen.c \
 			display/ft_putchar.c \
 			display/ft_putchar_fd.c \
