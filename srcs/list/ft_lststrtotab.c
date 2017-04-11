@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 19:16:32 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/10 19:19:02 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/04/11 17:47:47 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	**ft_lststrtotab(t_list *lst)
 	p = 0;
 	while (lst)
 	{
-		tab[p++] = lst->content;
+		tab[p++] = ft_strdup(lst->content);
 		lst = lst->next;
 	}
 	tab[p] = NULL;

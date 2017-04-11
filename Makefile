@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/04/10 19:27:45 by nmougino         ###   ########.fr        #
+#    Updated: 2017/04/10 19:40:00 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -192,8 +192,7 @@ re: fclean all
 
 #	Compilation rules
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	@echo "$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR)" | lolcat
-	@$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR)
+	$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR)
 
 $(OBJDIR):
 	@echo "$(GRA)$(CYA)@ ++ Objects compilation$(DEF)"
