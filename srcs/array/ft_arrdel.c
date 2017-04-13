@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 19:22:42 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/10 19:27:19 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/04/13 18:10:20 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	ft_arrdel(void **tab)
 		free(*tmp);
 		++tmp;
 	}
-	free(tmp);
+	free(*tmp);
 	free(tab);
 }
