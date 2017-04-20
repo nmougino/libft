@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static void	di_tmp(t_spec *sp, t_print *pr, intmax_t p)
+static void	di_tmp(t_spec *sp, t_print *pr, t_intmax p)
 {
 	if (sp->flags & E_ZERO)
 		applyplusspace(pr, sp, p >= 0);
@@ -24,7 +24,7 @@ void		conv_d(t_spec *sp, t_print *pr)
 {
 	int			i;
 	int			j;
-	intmax_t	p;
+	t_intmax	p;
 	int			l;
 
 	if (!((p = recupparam(sp->hljz, pr->ap)) > -9223372036854775807))
@@ -50,7 +50,7 @@ void		conv_i(t_spec *sp, t_print *pr)
 {
 	int			i;
 	int			j;
-	intmax_t	p;
+	t_intmax	p;
 	int			l;
 
 	if (!((p = recupparam(sp->hljz, pr->ap)) > -9223372036854775807))

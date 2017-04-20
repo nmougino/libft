@@ -15,7 +15,7 @@
 void	conv_p(t_spec *spec, t_print *print)
 {
 	int			j;
-	uintmax_t	p;
+	t_uintmax	p;
 
 	spec->hljz = E_L;
 	p = urecupparam(spec->hljz, print->ap);

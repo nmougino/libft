@@ -65,7 +65,7 @@ void			conv_lc(t_spec *spec, t_print *print)
 	size_t	nbbi;
 
 	p = (wchar_t)urecupparam(spec->hljz, print->ap);
-	nbbi = ft_bitlen((uintmax_t)p);
+	nbbi = ft_bitlen((t_uintmax)p);
 	if (!(spec->flags & E_DASH))
 		applymfw(print, spec, spec->mfw - nboc(nbbi));
 	adduni(p, nbbi, print);
@@ -84,13 +84,13 @@ void			conv_ls(t_spec *spec, t_print *print)
 	p = (wchar_t*)(unsigned long)urecupparam(E_LONG, print->ap);
 	if (!p)
 		p = L"(null)";
-	nbbi = ft_bitlen((uintmax_t)p[i]);
+	nbbi = ft_bitlen((t_uintmax)p[i]);
 	j = (spec->prec <= -1) ? nboc(nbbi) : 0;
 	if (!(spec->flags & E_DASH))
 		applymfw(print, spec, spec->mfw - ft_wstrlen(p) - j);
 	while (p[i] && (spec->prec > 0 || spec->prec <= -1))
 	{
-		nbbi = ft_nbrlenbasemax((uintmax_t)p[i], 2);
+		nbbi = ft_nbrlenbasemax((t_uintmax)p[i], 2);
 		spec->prec -= nboc(nbbi);
 		adduni(p[i], nbbi, print);
 		i++;

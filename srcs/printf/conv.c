@@ -31,7 +31,7 @@ static int	setspec(t_print *print, t_spec *spec, const char *str)
 
 int			conv(t_spec *spec, t_print *print, const char *format)
 {
-	convf_t	convf;
+	t_convf	convf;
 	int		tmp;
 
 	if (format[0] == '%')
@@ -41,7 +41,7 @@ int			conv(t_spec *spec, t_print *print, const char *format)
 	}
 	if ((tmp = setspec(print, spec, format)) == -1)
 		return (-1);
-	convf = (convf_t)print->convftab[
+	convf = (t_convf)print->convftab[
 		ft_strnloc(spec->conv, "sSpdDioOuUxXcCb%", 16)];
 	convf(spec, print);
 	return (tmp);

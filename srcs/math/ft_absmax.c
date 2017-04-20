@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-intmax_t	ft_absmax(intmax_t nb)
+t_intmax	ft_absmax(t_intmax nb)
 {
 	if (nb < 0)
 		return (-nb);

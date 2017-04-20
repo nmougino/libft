@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	sitoa(intmax_t p, t_print *print, size_t l)
+void	sitoa(t_intmax p, t_print *print, size_t l)
 {
 	char	c[50];
 

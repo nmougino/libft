@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/04/20 17:32:24 by nmougino         ###   ########.fr        #
+#    Updated: 2017/04/20 17:48:12 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ DETDIR =	array btree display list math memory misc printf string
 #	Liste des sources
 SRC =		array/ft_arrdel.c \
 			array/ft_arrglu.c \
+			array/ft_arrnglu.c \
 			array/ft_arrlen.c \
 			btree/ft_btreeadd_left.c \
 			btree/ft_btreeadd_right.c \

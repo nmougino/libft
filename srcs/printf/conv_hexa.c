@@ -16,7 +16,7 @@ void	conv_x(t_spec *spec, t_print *print)
 {
 	size_t		i;
 	size_t		j;
-	uintmax_t	p;
+	t_uintmax	p;
 
 	p = urecupparam(spec->hljz, print->ap);
 	i = ((spec->flags & E_SHARP && !(spec->flags & E_ZERO)) ? 2 : 0);
@@ -40,7 +40,7 @@ void	conv_bx(t_spec *spec, t_print *print)
 {
 	size_t		i;
 	size_t		j;
-	uintmax_t	p;
+	t_uintmax	p;
 
 	p = urecupparam(spec->hljz, print->ap);
 	i = ((spec->flags & E_SHARP && !(spec->flags & E_ZERO)) ? 2 : 0);

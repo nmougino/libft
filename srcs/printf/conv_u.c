@@ -14,7 +14,7 @@
 
 void	conv_u(t_spec *spec, t_print *print)
 {
-	uintmax_t	p;
+	t_uintmax	p;
 
 	p = urecupparam(spec->hljz, print->ap);
 	if (!(!p && !spec->prec))

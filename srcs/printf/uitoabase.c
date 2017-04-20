@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	uitoabase(uintmax_t p, char *base, t_print *print, size_t l)
+void	uitoabase(t_uintmax p, char *base, t_print *print, size_t l)
 {
 	size_t	baselen;
 	char	c[50];

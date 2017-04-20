@@ -13,40 +13,40 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-intmax_t	recupparam(int type, va_list ap)
+t_intmax	recupparam(int type, va_list ap)
 {
 	if (type == E_INT)
-		return ((intmax_t)va_arg(ap, int));
+		return ((t_intmax)va_arg(ap, int));
 	if (type == E_CHAR)
-		return ((intmax_t)(char)va_arg(ap, int));
+		return ((t_intmax)(char)va_arg(ap, int));
 	if (type == E_SHORT)
-		return ((intmax_t)(short)va_arg(ap, int));
+		return ((t_intmax)(short)va_arg(ap, int));
 	if (type == E_LONG)
-		return ((intmax_t)va_arg(ap, long));
+		return ((t_intmax)va_arg(ap, long));
 	if (type == E_LLONG)
-		return ((intmax_t)va_arg(ap, long long));
+		return ((t_intmax)va_arg(ap, long long));
 	if (type == E_SIZE_T)
-		return ((intmax_t)va_arg(ap, size_t));
+		return ((t_intmax)va_arg(ap, size_t));
 	if (type == E_INTMAX)
-		return (va_arg(ap, intmax_t));
+		return (va_arg(ap, t_intmax));
 	return (0);
 }
 
-uintmax_t	urecupparam(int type, va_list ap)
+t_uintmax	urecupparam(int type, va_list ap)
 {
 	if (type == E_INT)
-		return ((uintmax_t)va_arg(ap, unsigned int));
+		return ((t_uintmax)va_arg(ap, unsigned int));
 	if (type == E_CHAR)
-		return ((uintmax_t)(unsigned char)va_arg(ap, unsigned int));
+		return ((t_uintmax)(unsigned char)va_arg(ap, unsigned int));
 	if (type == E_SHORT)
-		return ((uintmax_t)(unsigned short)va_arg(ap, unsigned int));
+		return ((t_uintmax)(unsigned short)va_arg(ap, unsigned int));
 	if (type == E_LONG)
-		return ((uintmax_t)va_arg(ap, unsigned long));
+		return ((t_uintmax)va_arg(ap, unsigned long));
 	if (type == E_LLONG)
-		return ((uintmax_t)va_arg(ap, unsigned long long));
+		return ((t_uintmax)va_arg(ap, unsigned long long));
 	if (type == E_SIZE_T)
-		return ((uintmax_t)va_arg(ap, size_t));
+		return ((t_uintmax)va_arg(ap, size_t));
 	if (type == E_INTMAX)
-		return (va_arg(ap, uintmax_t));
+		return (va_arg(ap, t_uintmax));
 	return (0);
 }

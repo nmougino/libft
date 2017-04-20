@@ -12,14 +12,14 @@
 
 #include "ft_printf.h"
 
-size_t	ft_nbrlenbasemax(uintmax_t nb, int base)
+size_t	ft_nbrlenbasemax(t_uintmax nb, int base)
 {
 	double	tmp;
 	size_t	i;
 
 	i = 1;
 	tmp = (double)nb;
-	while (tmp >= (uintmax_t)base)
+	while (tmp >= (t_uintmax)base)
 	{
 		++i;
 		tmp /= base;

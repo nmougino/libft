@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-size_t	ft_nbrlenmax(intmax_t nb)
+size_t	ft_nbrlenmax(t_intmax nb)
 {
 	size_t	i;
 

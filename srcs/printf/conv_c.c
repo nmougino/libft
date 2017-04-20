@@ -14,7 +14,7 @@
 
 void	conv_c(t_spec *spec, t_print *print)
 {
-	intmax_t	p;
+	t_intmax	p;
 
 	if (spec->hljz == E_L || spec->hljz == E_LL)
 	{

@@ -14,7 +14,7 @@
 
 void	conv_o(t_spec *spec, t_print *print)
 {
-	uintmax_t	p;
+	t_uintmax	p;
 	int			i;
 	int			j;
 	int			k;

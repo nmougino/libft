@@ -46,8 +46,8 @@ static void	applyparam(t_spec *spec, t_print *print, int h)
 
 void		conv_b(t_spec *spec, t_print *print)
 {
-	uintmax_t	p;
-	uintmax_t	tmp;
+	t_uintmax	p;
+	t_uintmax	tmp;
 	size_t		len;
 	size_t		i;
 	size_t		tmplen;

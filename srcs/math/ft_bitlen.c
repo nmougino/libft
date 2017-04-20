@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-size_t	ft_bitlen(uintmax_t p)
+size_t	ft_bitlen(t_uintmax p)
 {
-	uintmax_t	tmp;
+	t_uintmax	tmp;
 	size_t		i;
 
 	tmp = p;
