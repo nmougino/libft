@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/10 19:26:35 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/04/20 17:31:04 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,18 @@ typedef	struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_btree
+{
+	struct s_btree	*left;
+	struct s_btree	*right;
+	void			*data;
+}					t_btree;
+
+t_btree	*ft_btreenew(void *data);
+void	ft_btreeadd_left(t_btree *p, t_btree *c);
+void	ft_btreeadd_right(t_btree *p, t_btree *c);
+
 
 void				ft_lstadd_top(t_list **alst, t_list *new);
 void				ft_lstadd_end(t_list **alst, t_list *new);
