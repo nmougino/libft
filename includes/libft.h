@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/20 18:06:21 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/04/20 19:35:48 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ typedef struct				s_btree
 void						ft_lstadd_top(t_list **alst, t_list *new);
 void						ft_lstadd_end(t_list **alst, t_list *new);
 void						ft_lstadd_sort(t_list **alst, t_list *new,
-						int (*sfun)(void *, void *));
+								int (*sfun)(void *, void *));
 
 int							ft_abs(int nb);
 t_intmax					ft_absmax(t_intmax nb);
