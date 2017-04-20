@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/20 19:35:48 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/04/20 20:28:34 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,8 @@ size_t						ft_nbrlenbase(unsigned int nb, unsigned int base);
 size_t						ft_nbrlenbasemax(t_uintmax nb, int base);
 size_t						ft_nbrlenmax(t_intmax nb);
 int							ft_pow(int nb, int pow);
+void						ft_putbtree(t_btree *root,
+								void (*ft_putfunc)(const char *));
 void						ft_putchar(char c);
 void						ft_putchar_fd(char c, int fd);
 void						ft_putendl(char const *s);
