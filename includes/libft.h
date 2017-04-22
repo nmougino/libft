@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/20 20:28:34 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/04/22 18:17:43 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ size_t						ft_bitlen(t_uintmax p);
 t_btree						*ft_btreenew(void *data);
 void						ft_btreeadd_left(t_btree *p, t_btree *c);
 void						ft_btreeadd_right(t_btree *p, t_btree *c);
+void						ft_btreemap(t_btree **root,
+								void(*fun)(t_btree **t));
 void						ft_bzero(void *s, size_t n);
 extern void					ft_free(void *ptr);
 int							ft_isalpha(int c);
