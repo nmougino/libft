@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/22 18:17:43 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/04/22 18:22:18 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,12 @@ char						*ft_arrnglu(char **arg, char *separator,
 size_t						ft_arrlen(void *a, size_t type);
 int							ft_atoi(const char *str);
 size_t						ft_bitlen(t_uintmax p);
-t_btree						*ft_btreenew(void *data);
 void						ft_btreeadd_left(t_btree *p, t_btree *c);
 void						ft_btreeadd_right(t_btree *p, t_btree *c);
+void						ft_btreedel(t_btree *r, void (*fun)(void *));
 void						ft_btreemap(t_btree **root,
 								void(*fun)(t_btree **t));
+t_btree						*ft_btreenew(void *data);
 void						ft_bzero(void *s, size_t n);
 extern void					ft_free(void *ptr);
 int							ft_isalpha(int c);
