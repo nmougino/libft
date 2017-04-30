@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/30 18:50:37 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/30 19:01:20 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/04/30 19:37:53 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	**ft_arrstrcpy(char **src)
 	i = 0;
 	while (src[i])
 	{
-		tab[i] = src[i];
+		tab[i] = ft_strdup(src[i]);
 		++i;
 	}
 	tab[i] = NULL;
