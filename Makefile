@@ -6,13 +6,13 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/04/22 18:22:04 by nmougino         ###   ########.fr        #
+#    Updated: 2017/04/30 18:55:47 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #	Compilator - clang est plus sur que gcc
 CC =		clang
-CFLAGS =	-Weverything
+CFLAGS =	-Wall -Wextra -Werror -Weverything
 
 #	Binary
 NAME =		libft.a
@@ -33,11 +33,14 @@ SRC =		array/ft_arrdel.c \
 			array/ft_arrglu.c \
 			array/ft_arrnglu.c \
 			array/ft_arrlen.c \
+			array/ft_arrstrcpy.c \
+			array/ft_arrstrncpy.c \
 			btree/ft_btreeadd_left.c \
 			btree/ft_btreeadd_right.c \
 			btree/ft_btreedel.c \
 			btree/ft_btreemap.c \
 			btree/ft_btreenew.c \
+			display/ft_putarr.c \
 			display/ft_putbtree.c \
 			display/ft_putchar.c \
 			display/ft_putchar_fd.c \

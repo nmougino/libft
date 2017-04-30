@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/22 18:22:18 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/04/30 19:01:33 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char						*ft_arrglu(char **arg, char *separator,
 char						*ft_arrnglu(char **arg, char *separator,
 								size_t size, size_t n);
 size_t						ft_arrlen(void *a, size_t type);
+char						**ft_arrstrcpy(char **src);
+char						**ft_arrstrncpy(char **src, size_t n);
 int							ft_atoi(const char *str);
 size_t						ft_bitlen(t_uintmax p);
 void						ft_btreeadd_left(t_btree *p, t_btree *c);
@@ -117,6 +119,7 @@ void						ft_putnbrendl_fd(int n, int fd);
 void						ft_putline(char *str);
 void						ft_putstr(char const *s);
 void						ft_putstr_fd(char const *s, int fd);
+void						ft_putstrarr(char **arr);
 float						ft_sqrt(float nb);
 char						*ft_stradd(char **s1, char const *s2);
 char						*ft_strcat(char *s1, const char *s2);
