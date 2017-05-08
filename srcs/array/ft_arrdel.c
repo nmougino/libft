@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 19:22:42 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/13 18:10:20 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/05/08 19:05:22 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 void	ft_arrdel(void **tab)
 {
 	void	**tmp;
-
-	tmp = tab;
-	while (*tmp)
+	
+	if (tab)
 	{
+		tmp = tab;
+		while (*tmp)
+		{
+			free(*tmp);
+			++tmp;
+		}
 		free(*tmp);
-		++tmp;
+		free(tab);
 	}
-	free(*tmp);
-	free(tab);
 }
