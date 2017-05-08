@@ -6,15 +6,15 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:23:37 by nmougino          #+#    #+#             */
-/*   Updated: 2016/11/12 18:40:08 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/05/08 19:24:22 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_itoa_doit(char *ans, size_t len, int nb)
+static void	ft_itoa_doit(char *ans, int len, int nb)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	ans[len] = '\0';
@@ -36,14 +36,14 @@ static void	ft_itoa_doit(char *ans, size_t len, int nb)
 char		*ft_itoa(int nb)
 {
 	char	*ans;
-	size_t	len;
+	int		len;
 
 	ans = NULL;
 	len = 0;
 	if (nb == -2147483648)
 		return (ft_strdup("-2147483648"));
-	len = ft_nbrlen(nb);
-	if (!(ans = malloc((sizeof(char)) * (len + 1))))
+	len = (int)ft_nbrlen(nb);
+	if (!(ans = ft_strnew(ft_nbrlen(nb))))
 		return (NULL);
 	ft_itoa_doit(ans, len, nb);
 	return (ans);
