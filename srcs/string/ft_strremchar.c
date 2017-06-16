@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/08 22:03:53 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/08 22:09:56 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/06/16 15:34:26 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 ** de pouvoir etre utilisee sur des chaines statiques.
 */
 
-void	ft_strremchar(char **src, size_t pos)
+void	ft_strremchar(char *src, size_t pos)
 {
-	if (pos < ft_strlen(*src))
+	if (pos < ft_strlen(src))
 	{
-		while ((*src)[pos])
+		while (src[pos])
 		{
-			(*src)[pos] = (*src)[pos + 1];
+			src[pos] = src[pos + 1];
 			++pos;
 		}
 	}

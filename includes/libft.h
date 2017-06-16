@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/30 19:24:57 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/06/16 15:35:38 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,7 +152,7 @@ char						*ft_strnew(size_t size);
 char						*ft_strnstr(const char *s1, const char *s2,
 								size_t n);
 char						*ft_strrchr(const char *s, int c);
-void						ft_strremchar(char **src, size_t pos);
+void						ft_strremchar(char *src, size_t pos);
 char						*ft_strrev(char *str);
 char						*ft_strstr(const char *s1, const char *s2);
 char						**ft_strsplit(char const *s, char c);
