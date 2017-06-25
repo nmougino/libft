@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/04/30 19:25:08 by nmougino         ###   ########.fr        #
+#    Updated: 2017/06/25 20:51:55 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,13 +26,13 @@ SRCDIR =	srcs
 INCDIR =	includes
 LIBDIR =	libs
 OBJDIR =	objs
-DETDIR =	array btree display list math memory misc printf string
+DETDIR =	array btree display dlist list math memory misc printf string
 
 #	Liste des sources
 SRC =		array/ft_arrdel.c \
 			array/ft_arrglu.c \
-			array/ft_arrnglu.c \
 			array/ft_arrlen.c \
+			array/ft_arrnglu.c \
 			array/ft_arrstrcpy.c \
 			array/ft_arrstrncpy.c \
 			btree/ft_btreeadd_left.c \
@@ -41,8 +41,8 @@ SRC =		array/ft_arrdel.c \
 			btree/ft_btreemap.c \
 			btree/ft_btreenew.c \
 			display/ft_putarr.c \
-			display/ft_putbtreestr.c \
 			display/ft_putbtreearr.c \
+			display/ft_putbtreestr.c \
 			display/ft_putchar.c \
 			display/ft_putchar_fd.c \
 			display/ft_putendl.c \
@@ -54,6 +54,9 @@ SRC =		array/ft_arrdel.c \
 			display/ft_putnbrendl_fd.c \
 			display/ft_putstr.c \
 			display/ft_putstr_fd.c \
+			dlist/ft_dlstadd.c \
+			dlist/ft_dlstdel.c \
+			dlist/ft_dlstnew.c \
 			get_next_line.c \
 			list/ft_lstadd_end.c \
 			list/ft_lstadd_sort.c \
@@ -132,8 +135,8 @@ SRC =		array/ft_arrdel.c \
 			string/ft_strcpy.c \
 			string/ft_strdel.c \
 			string/ft_strdup.c \
-			string/ft_strinschar.c \
 			string/ft_strequ.c \
+			string/ft_strinschar.c \
 			string/ft_striter.c \
 			string/ft_striteri.c \
 			string/ft_strjoin.c \

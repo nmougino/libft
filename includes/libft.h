@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/06/16 15:35:38 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/06/25 20:54:41 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,17 @@ typedef	struct				s_list
 	size_t					content_size;
 	struct s_list			*next;
 }							t_list;
+
+typedef	struct				s_dlist
+{
+	void					*content;
+	size_t					content_size;
+	struct s_dlist			*next;
+	struct s_dlist			*prev;
+}							t_dlist;
+
+# define TO_END				1
+# define TO_BEG				0
 
 typedef struct				s_btree
 {
@@ -65,6 +76,11 @@ void						ft_btreemap(t_btree **root,
 								void(*fun)(t_btree **t));
 t_btree						*ft_btreenew(void *data);
 void						ft_bzero(void *s, size_t n);
+void						ft_dlstadd(t_dlist **alst, t_dlist *new);
+void						ft_dlstdel(t_dlist **alst,
+								void (*del)(void *, size_t), int tar);
+t_dlist						*ft_dlstnew(void const *content,
+								size_t content_size);
 extern void					ft_free(void *ptr);
 int							ft_isalpha(int c);
 int							ft_isalnum(int c);
