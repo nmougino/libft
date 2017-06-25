@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 07:55:35 by nmougino          #+#    #+#             */
-/*   Updated: 2017/06/25 19:46:53 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/06/25 21:04:04 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ t_dlist	*ft_dlstnew(void const *content, size_t content_size)
 {
 	t_dlist *lst;
 
-	lst = (t_dlist*)malloc(sizeof(t_dlist));
-	if (lst == NULL)
+	if (!(lst = (t_dlist*)malloc(sizeof(t_dlist))))
 		return (NULL);
-	if (content == NULL)
+	if (!content)
 	{
 		lst->content = NULL;
 		lst->content_size = 0;

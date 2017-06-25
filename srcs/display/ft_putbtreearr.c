@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/20 19:42:46 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/30 19:25:46 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/06/25 21:05:24 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 static void	ft_rec_putbtreearr(t_btree *r, int l)
 {
 	char	*str;
+
 	if (r)
 	{
 		if ((str = ft_arrglu(r->data, "| |", 3)))
