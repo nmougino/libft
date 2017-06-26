@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:04:42 by nmougino          #+#    #+#             */
-/*   Updated: 2017/06/25 20:53:58 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/06/26 19:45:54 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,15 @@ void	ft_dlstadd(t_dlist **alst, t_dlist *new)
 {
 	if (alst && new)
 	{
-		new->prev = (*alst)->prev;
-		if ((*alst)->prev)
-			(*alst)->next = new;
-		(*alst)->prev = new;
+		if (!(*alst))
+			new->prev = NULL;
+		else
+		{
+			new->prev = (*alst)->prev;
+			if ((*alst)->prev)
+				(*alst)->prev->next = new;
+			(*alst)->prev = new;
+		}
 		new->next = *alst;
 		*alst = new;
 	}
