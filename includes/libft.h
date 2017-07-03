@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/06/25 20:54:41 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/07/03 21:25:22 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,6 @@ typedef struct				s_btree
 	void					*data;
 }							t_btree;
 
-void						ft_lstadd_top(t_list **alst, t_list *new);
-void						ft_lstadd_end(t_list **alst, t_list *new);
-void						ft_lstadd_sort(t_list **alst, t_list *new,
-								int (*sfun)(void *, void *));
-
 int							ft_abs(int nb);
 t_intmax					ft_absmax(t_intmax nb);
 void						ft_arrdel(void **tab);
@@ -79,6 +74,7 @@ void						ft_bzero(void *s, size_t n);
 void						ft_dlstadd(t_dlist **alst, t_dlist *new);
 void						ft_dlstdel(t_dlist **alst,
 								void (*del)(void *, size_t), int tar);
+size_t						ft_dlstlen(t_dlist *lst);
 t_dlist						*ft_dlstnew(void const *content,
 								size_t content_size);
 extern void					ft_free(void *ptr);
@@ -91,9 +87,10 @@ int							ft_isprint(int c);
 int							ft_isup(int c);
 char						*ft_itoa(int nb);
 char						**ft_linesplit(char *s, char c);
-void						ft_lstadd(t_list **alst, t_list *new);
-void						ft_lstdelone(t_list **alst,
-								void (*del)(void *, size_t));
+void						ft_lstadd_top(t_list **alst, t_list *new);
+void						ft_lstadd_end(t_list **alst, t_list *new);
+void						ft_lstadd_sort(t_list **alst, t_list *new,
+								int (*sfun)(void *, void *));
 void						ft_lstdel(t_list **alst,
 								void (*del)(void *, size_t));
 void						ft_lstiter(t_list *lst, void (*f)(t_list *elem));
