@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/07/05 07:46:15 by nmougino         ###   ########.fr        #
+#    Updated: 2017/07/06 01:58:48 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -139,6 +139,7 @@ SRC =		array/ft_arrdel.c \
 			string/ft_strndup.c \
 			string/ft_strequ.c \
 			string/ft_strinschar.c \
+			string/ft_strinsstr.c \
 			string/ft_striter.c \
 			string/ft_striteri.c \
 			string/ft_strjoin.c \
