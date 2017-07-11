@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/07/09 22:33:52 by nmougino         ###   ########.fr        #
+#    Updated: 2017/07/12 00:22:12 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -159,7 +159,8 @@ SRC =		array/ft_arrdel.c \
 			string/ft_strsplit.c \
 			string/ft_strstr.c \
 			string/ft_strsub.c \
-			string/ft_strtrim.c
+			string/ft_strtrim.c \
+			string/ft_wordlen.c
 
 LIB =
 OBJ =		$(SRC:.c=.o)
