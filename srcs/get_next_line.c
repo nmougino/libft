@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 21:07:24 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/29 17:53:21 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/07/11 19:26:19 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ int			get_next_line(int const fd, char **line)
 		ptr = ft_strnew(GNL_BUFF_SIZE);
 		if ((i = (int)read(fd, ptr, GNL_BUFF_SIZE)) <= 0)
 		{
+			if (ptr)
+				free(ptr);
 			if (buftab[fd] && *buftab[fd])
 			{
 				ft_fillline(buftab[fd], line, 1);
