@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/07/12 00:22:12 by nmougino         ###   ########.fr        #
+#    Updated: 2017/07/22 18:04:46 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -189,6 +189,13 @@ define \n
 
 endef
 
+ifneq ($(wildcard /Users/nmougino/.brew/bin/lolcat), "")
+	LOLCAT = | lolcat -F 0.25
+endif
+
+
+UNICORN = "\n \t     \\ \n \t      \\ \n \t       \\\\ \n \t        \\\\ \n \t         >\\/7 \n \t     _.-(6\'  \\ \n \t    (=___._/\` \\ \n \t         )  \ | \n \t        /   / | \n \t       /    > / \n \t      j    < _\ \n \t  _.-\' :      \`\`. \n \t  \\ r=._\\        \`. \n \t <\`\\\\_  \\         .\`-. \n \t  \\ r-7  \`-. ._  \' .  \`\\ \n \t   \\\`,      \`-.\`7  7)   ) \n \t    \\/         \\|  \\\'  / \`-._ \n \t               ||    .\' \n \t                \\  ( \n \t                 >\\  > \n \t             ,.-\' >.\' \n \t            <.\'_.\'\' \n \t              <\' \n"
+
 # #
 #	RULES
 #
@@ -200,6 +207,7 @@ default:
 	@echo "$(GRA)  DEFAULT RULE EXECUTION  :::  rule $(DEFRULE)$(DEF)"
 	@$(addprefix make ,$(DEFRULE))
 	@echo "$(GRE)$(GRA)Programme termine :)$(DEF)"
+	@echo $(UNICORN) $(LOLCAT)
 
 glu: re
 	make clean
@@ -207,6 +215,7 @@ glu: re
 all: $(NAME)
 
 re: fclean all
+	@echo $(UNICORN) $(LOLCAT)
 
 #	Compilation rules
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
