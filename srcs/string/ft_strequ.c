@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 07:45:26 by nmougino          #+#    #+#             */
-/*   Updated: 2017/01/26 20:13:49 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/07/31 20:30:06 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,9 @@ int		ft_strequ(char const *s1, char const *s2)
 	}
 	if (!s2)
 		return (0);
-	while (s1[i] && s2[i])
-	{
-		if (s1[i] != s2[i])
-			return (0);
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		++i;
-	}
-	if (s1[i] != s2[i])
+	if (s1[i] && s2[i])
 		return (0);
 	return (1);
 }

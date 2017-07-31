@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 07:49:59 by nmougino          #+#    #+#             */
-/*   Updated: 2017/01/26 20:15:07 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/07/31 20:28:55 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,5 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 			return (0);
 		++i;
 	}
-	if (s1[i - 1] != s2[i - 1])
-		return (0);
 	return (1);
 }
