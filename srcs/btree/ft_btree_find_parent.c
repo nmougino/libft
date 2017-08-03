@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btreeadd_right.c                                :+:      :+:    :+:   */
+/*   ft_btree_find_parent.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/20 17:30:23 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/20 17:30:33 by nmougino         ###   ########.fr       */
+/*   Created: 2017/08/03 18:02:20 by nmougino          #+#    #+#             */
+/*   Updated: 2017/08/03 18:07:44 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_btreeadd_right(t_btree *p, t_btree *c)
+/*
+** Cette fonction retrouve le parent du second parametre en recherchant
+** dans le premier.
+*/
+
+t_btree	*ft_btree_find_parent(t_btree *r, t_btree *tar)
 {
-	if (p)
-		p->right = c;
+	if (!r)
+		return (NULL);
+	if (r->left == tar || r->right == tar)
+		return (r);
+	if (r->left)
+		return (ft_btree_find_parent(r->left, tar));
+	if (r->right)
+		return (ft_btree_find_parent(r->right, tar));
+	return (NULL);
 }

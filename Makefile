@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/08/01 18:42:45 by nmougino         ###   ########.fr        #
+#    Updated: 2017/08/03 18:10:51 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,6 @@ SRC =		array/ft_arrdel.c \
 			array/ft_arrnglu.c \
 			array/ft_arrstrcpy.c \
 			array/ft_arrstrncpy.c \
-			btree/ft_btreeadd_left.c \
-			btree/ft_btreeadd_right.c \
 			btree/ft_btreedel.c \
 			btree/ft_btreemap.c \
 			btree/ft_btreenew.c \
@@ -189,6 +187,10 @@ define \n
 
 endef
 
+ifneq ($(wildcard /Users/nmougino/.brew/bin/lolcat), "")
+	LOLCAT = | lolcat -F 0.25
+endif
+
 # #
 #	RULES
 #
@@ -207,11 +209,10 @@ glu: re
 all: $(NAME)
 
 re: fclean all
-	@echo $(UNICORN) $(LOLCAT)
 
 #	Compilation rules
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR)
+	$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR) $(LOLCAT)
 
 $(OBJDIR):
 	@echo "$(GRA)$(CYA)@ ++ Objects compilation$(DEF)"

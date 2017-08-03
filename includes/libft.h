@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/07/12 20:38:50 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/08/03 18:33:21 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,9 @@ typedef struct				s_btree
 	void					*data;
 }							t_btree;
 
+# define RIGHT				1
+# define LEFT				0
+
 int							ft_abs(int nb);
 t_intmax					ft_absmax(t_intmax nb);
 void						ft_arrdel(void **tab);
@@ -64,12 +67,13 @@ char						**ft_arrstrcpy(char **src);
 char						**ft_arrstrncpy(char **src, size_t n);
 int							ft_atoi(const char *str);
 size_t						ft_bitlen(t_uintmax p);
-void						ft_btreeadd_left(t_btree *p, t_btree *c);
-void						ft_btreeadd_right(t_btree *p, t_btree *c);
 void						ft_btreedel(t_btree *r, void (*fun)(void *));
 void						ft_btreemap(t_btree **root,
 								void(*fun)(t_btree **t));
 t_btree						*ft_btreenew(void *data);
+void						ft_btree_add_parent(t_btree **r, t_btree *new,
+								int side);
+t_btree						*ft_btree_find_parent(t_btree *r, t_btree *tar);
 void						ft_bzero(void *s, size_t n);
 void						ft_dlstadd(t_dlist **alst, t_dlist *new);
 void						ft_dlstdel(t_dlist **alst,
