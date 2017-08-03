@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/03 18:33:21 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/08/03 21:04:06 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char						**ft_arrstrcpy(char **src);
 char						**ft_arrstrncpy(char **src, size_t n);
 int							ft_atoi(const char *str);
 size_t						ft_bitlen(t_uintmax p);
-void						ft_btreedel(t_btree *r, void (*fun)(void *));
+void						ft_btreedel(t_btree **r, void (*fun)(void *));
 void						ft_btreemap(t_btree **root,
 								void(*fun)(t_btree **t));
 t_btree						*ft_btreenew(void *data);
