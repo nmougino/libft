@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/08/12 19:50:30 by nmougino         ###   ########.fr        #
+#    Updated: 2017/08/12 21:11:42 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -190,10 +190,6 @@ define \n
 
 endef
 
-ifneq ($(wildcard /Users/nmougino/.brew/bin/lolcat), "")
-	LOLCAT = | lolcat -F 0.25
-endif
-
 # #
 #	RULES
 #
@@ -215,7 +211,7 @@ re: fclean all
 
 #	Compilation rules
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR) $(LOLCAT)
+	$(CC) $(CFLAGS) -c  -o $@ $^ -I$(INCDIR)
 
 $(OBJDIR):
 	@echo "$(GRA)$(CYA)@ ++ Objects compilation$(DEF)"
