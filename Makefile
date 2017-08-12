@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/08/03 21:02:18 by nmougino         ###   ########.fr        #
+#    Updated: 2017/08/12 19:50:30 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCDIR =	srcs
 INCDIR =	includes
 LIBDIR =	libs
 OBJDIR =	objs
-DETDIR =	array btree display dlist list math memory misc printf string
+DETDIR =	array btree display dlist file list math memory misc printf string
 
 #	Liste des sources
 SRC =		array/ft_arrdel.c \
@@ -58,6 +58,7 @@ SRC =		array/ft_arrdel.c \
 			dlist/ft_dlstdel.c \
 			dlist/ft_dlstlen.c \
 			dlist/ft_dlstnew.c \
+			file/ft_open.c \
 			get_next_line.c \
 			list/ft_lstadd_end.c \
 			list/ft_lstadd_sort.c \

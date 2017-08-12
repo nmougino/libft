@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/03 21:04:06 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/08/12 19:50:08 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <fcntl.h>
+# include <errno.h>
 # include "ft_printf.h"
 
 /*
@@ -122,6 +123,7 @@ size_t						ft_nbrlen(int nb);
 size_t						ft_nbrlenbase(unsigned int nb, unsigned int base);
 size_t						ft_nbrlenbasemax(t_uintmax nb, int base);
 size_t						ft_nbrlenmax(t_intmax nb);
+int							ft_open(char *path, int flag, char *parent);
 int							ft_pow(int nb, int pow);
 void						ft_putbtreestr(t_btree *root);
 void						ft_putbtreearr(t_btree *root);
@@ -195,5 +197,42 @@ size_t						ft_wordlen(char *str, char *seps);
 # define GNL_BUFF_SIZE 1
 
 int							get_next_line(int const fd, char **line);
+
+/*
+** ERNNO ERROR MESSAGES
+*/
+
+# define STR_EACCES "Permission denied"
+# define STR_EDQUOT "Disk space full"
+# define STR_EEXIST "The file already exist"
+# define STR_EINVAL "Bad flag"
+# define STR_EIO "I/O error"
+# define STR_EISDIR "The patname given route to a directory"
+# define STR_ELOOP "Too many symbolic links encountered in translating the p \
+		athname. Symbolic link loop suspected. OR O_NOFOLLOW is specified an \
+		d the file is a symbolic link"
+# define STR_EMFILE "Too many file descriptor are already opened or the syst \
+		em file table is full"
+# define STR_ENAMETOOLONG "The pathname is too long"
+# define STR_ENOENT "O_CREAT is not set and the named file does not exist. O \
+		R a component of the path name does not exist"
+# define STR_ENOSPC "Disk space full"
+# define STR_ENOTDIR "A component of the path prefix is not a directory. OR t \
+		he path argument is not an absolute path and fd is nei \
+		ther AT_FDCWD nor a file descriptor associated with a directory."
+# define STR_ENXIO "O_NONBLOCK and O_WRONLY are set, the file is a FIFO, an \
+		d no process has it open for reading"
+# define STR_EOPNOTSUPP "O_SHLOCK or O_EXLOCK is specified, but the underlyin \
+		g filesystem does not support locking. OR an attempt is made to ope \
+		n a socket (not currently implemented)"
+# define STR_EOVERFLOW "The named file is a regular file and its size does n \
+		ot fit in an object of type off_t."
+# define STR_EROFS "The named file resides on a read-only file system, and t \
+		he file is to be modified."
+# define STR_ETXTBSY "The file is a pure procedure (shared text) file that i \
+		s being executed and the open() call requests write access."
+# define STR_EBADF "The path argument does not specify an absolute path and t \
+		he fd argument is neither AT_FDCWD nor a valid file descriptor open f \
+		or searching."
 
 #endif
