@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/12 19:50:08 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/08/14 20:22:01 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ char						*ft_arrglu(char **arg, char *separator,
 								size_t size);
 char						*ft_arrnglu(char **arg, char *separator,
 								size_t size, size_t n);
+void						ft_arriter_str(char **arr, void (*f)(char **));
 size_t						ft_arrlen(void *a, size_t type);
 char						**ft_arrstrcpy(char **src);
 char						**ft_arrstrncpy(char **src, size_t n);
