@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 18:20:08 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/23 18:32:42 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/08/23 19:23:22 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ pid_t	ft_fork(char *parent)
 		str = (errno == EAGAIN) ? FORK_EAGAIN : str;
 		str = (errno == ENOMEM) ? FORK_ENOMEM : str;
 		str = !str ? "Unknow error, please check errno" : str;
-		ft_printf("%s: fork error: %s\n", parent, str);
+		ft_dprintf(2, "%s: fork error: %s\n", parent, str);
 		exit(-1);
 	}
 	return (p);
