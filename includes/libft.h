@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/14 20:22:01 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/08/23 18:34:15 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ void						ft_dlstdel(t_dlist **alst,
 size_t						ft_dlstlen(t_dlist *lst);
 t_dlist						*ft_dlstnew(void const *content,
 								size_t content_size);
+pid_t						ft_fork(char *parent);
 extern void					ft_free(void *ptr);
 int							ft_isalpha(int c);
 int							ft_isalnum(int c);
@@ -200,7 +201,7 @@ size_t						ft_wordlen(char *str, char *seps);
 int							get_next_line(int const fd, char **line);
 
 /*
-** ERNNO ERROR MESSAGES
+** ERNNO ERROR MESSAGES FOR OPEN
 */
 
 # define STR_EACCES "Permission denied"
@@ -209,31 +210,42 @@ int							get_next_line(int const fd, char **line);
 # define STR_EINVAL "Bad flag"
 # define STR_EIO "I/O error"
 # define STR_EISDIR "The patname given route to a directory"
-# define STR_ELOOP "Too many symbolic links encountered in translating the p \
-		athname. Symbolic link loop suspected. OR O_NOFOLLOW is specified an \
-		d the file is a symbolic link"
-# define STR_EMFILE "Too many file descriptor are already opened or the syst \
-		em file table is full"
+# define STR_ELOOP "Too many symbolic links encountered in translating the p\
+athname. Symbolic link loop suspected. OR O_NOFOLLOW is specified an\
+d the file is a symbolic link"
+# define STR_EMFILE "Too many file descriptor are already opened or the syst\
+em file table is full"
 # define STR_ENAMETOOLONG "The pathname is too long"
-# define STR_ENOENT "O_CREAT is not set and the named file does not exist. O \
-		R a component of the path name does not exist"
+# define STR_ENOENT "O_CREAT is not set and the named file does not exist. O\
+R a component of the path name does not exist"
 # define STR_ENOSPC "Disk space full"
-# define STR_ENOTDIR "A component of the path prefix is not a directory. OR t \
-		he path argument is not an absolute path and fd is nei \
-		ther AT_FDCWD nor a file descriptor associated with a directory."
-# define STR_ENXIO "O_NONBLOCK and O_WRONLY are set, the file is a FIFO, an \
-		d no process has it open for reading"
-# define STR_EOPNOTSUPP "O_SHLOCK or O_EXLOCK is specified, but the underlyin \
-		g filesystem does not support locking. OR an attempt is made to ope \
-		n a socket (not currently implemented)"
-# define STR_EOVERFLOW "The named file is a regular file and its size does n \
-		ot fit in an object of type off_t."
-# define STR_EROFS "The named file resides on a read-only file system, and t \
-		he file is to be modified."
-# define STR_ETXTBSY "The file is a pure procedure (shared text) file that i \
-		s being executed and the open() call requests write access."
-# define STR_EBADF "The path argument does not specify an absolute path and t \
-		he fd argument is neither AT_FDCWD nor a valid file descriptor open f \
-		or searching."
+# define STR_ENOTDIR "A component of the path prefix is not a directory. OR t\
+he path argument is not an absolute path and fd is nei\
+ther AT_FDCWD nor a file descriptor associated with a directory."
+# define STR_ENXIO "O_NONBLOCK and O_WRONLY are set, the file is a FIFO, an\
+d no process has it open for reading"
+# define STR_EOPNOTSUPP "O_SHLOCK or O_EXLOCK is specified, but the underlyin\
+g filesystem does not support locking. OR an attempt is made to ope\
+n a socket (not currently implemented)"
+# define STR_EOVERFLOW "The named file is a regular file and its size does n\
+ot fit in an object of type off_t."
+# define STR_EROFS "The named file resides on a read-only file system, and t\
+he file is to be modified."
+# define STR_ETXTBSY "The file is a pure procedure (shared text) file that i\
+s being executed and the open() call requests write access."
+# define STR_EBADF "The path argument does not specify an absolute path and t\
+he fd argument is neither AT_FDCWD nor a valid file descriptor open f\
+or searching."
+
+/*
+** FOR FORK
+*/
+
+# define FORK_EAGAIN "The system-imposed limit on the total number of process\
+es under execution would be exceeded.  This limit is configuration-dependent.\
+OR The system-imposed limit MAXUPRC (<sys/param.h>) on the total number of pro\
+cesses under execution by a single user would be exceeded."
+
+# define FORK_ENOMEM "There is insufficient swap space for the new process."
 
 #endif

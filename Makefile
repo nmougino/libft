@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/08/14 20:22:30 by nmougino         ###   ########.fr        #
+#    Updated: 2017/08/23 18:33:49 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,7 @@ SRC =		array/ft_arrdel.c \
 			dlist/ft_dlstlen.c \
 			dlist/ft_dlstnew.c \
 			file/ft_open.c \
+			ft_fork.c \
 			get_next_line.c \
 			list/ft_lstadd_end.c \
 			list/ft_lstadd_sort.c \
