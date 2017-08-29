@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btree_add_parent.c                              :+:      :+:    :+:   */
+/*   ft_arr_move_left.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 18:30:13 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/29 13:01:35 by nmougino         ###   ########.fr       */
+/*   Created: 2017/08/29 12:46:31 by nmougino          #+#    #+#             */
+/*   Updated: 2017/08/29 12:55:05 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Cette fonction ajoute un noeud en temps que parent de la racine envoyee.
-** Pour ne rien perdre il est important que le la racine envoyee soit la plus
-** haute.
-** Dans le cas contraire, ca va faire de la merde
-*/
-
-void	ft_btree_add_parent(t_btree **r, t_btree *new, int side)
+void	ft_arr_move_left_str(char **arr)
 {
-	if (side == LEFT)
-		new->left = *r;
-	else
-		new->right = *r;
-	*r = new;
+	int		i;
+	char	*tmp;
+
+	if (!arr || !(*arr))
+		return ;
+	i = -1;
+	tmp = arr[0];
+	while (arr[++i])
+		arr[i] = arr[i + 1];
+	ft_strdel(&tmp);
 }

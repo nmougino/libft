@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/23 18:34:15 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/08/29 12:53:34 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ typedef struct				s_btree
 
 int							ft_abs(int nb);
 t_intmax					ft_absmax(t_intmax nb);
+void						ft_arr_move_left_str(char **arr);
 void						ft_arrdel(void **tab);
 char						*ft_arrglu(char **arg, char *separator,
 								size_t size);
