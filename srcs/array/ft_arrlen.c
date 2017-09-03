@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/19 17:09:10 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/19 18:11:06 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/09/03 21:00:05 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ size_t	ft_arrlen(void *a, size_t type)
 	c = 0;
 	l = 0;
 	arr = (char *)a;
+	if (!a)
+		return (0);
 	while (i)
 	{
 		while (l < type && !arr[l])

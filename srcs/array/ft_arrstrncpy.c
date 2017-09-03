@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/30 18:50:37 by nmougino          #+#    #+#             */
-/*   Updated: 2017/04/30 19:46:52 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/09/03 20:58:49 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	**ft_arrstrncpy(char **src, size_t n)
 	if (!n || !(tab = malloc(sizeof(char *) * (n + 1))))
 		return (NULL);
 	i = 0;
-	while (src[i] && i < n)
+	while (src && src[i] && i < n)
 	{
 		tab[i] = ft_strdup(src[i]);
 		++i;
