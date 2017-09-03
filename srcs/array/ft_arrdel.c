@@ -6,24 +6,25 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 19:22:42 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/29 13:53:06 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/09/03 20:37:55 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_arrdel(void **tab)
+void	ft_arrdel(void ***tab)
 {
 	void	**tmp;
 
-	if (tab)
+	if (tab && *tab)
 	{
-		tmp = tab;
+		tmp = *tab;
 		while (*tmp)
 		{
 			free(*tmp);
 			++tmp;
 		}
-		free(tab);
+		free(*tab);
+		*tab = NULL;
 	}
 }
