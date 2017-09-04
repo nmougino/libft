@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/12 18:32:11 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/12 19:54:58 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/09/04 21:35:23 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ static char	*errstr(void)
 	return (str);
 }
 
-int			ft_open(char *path, int flag, char *parent)
+int			ft_open(char *path, int flag, int perm, char *parent)
 {
 	int	i;
 
-	i = open(path, flag);
+	i = open(path, flag, perm);
 	if (i == -1)
 		ft_dprintf(2, "%s : %s : %s\n", parent, path, errstr());
 	return (i);

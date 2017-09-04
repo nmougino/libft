@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/09/04 19:55:53 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/09/04 21:35:41 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,8 @@ size_t						ft_nbrlen(int nb);
 size_t						ft_nbrlenbase(unsigned int nb, unsigned int base);
 size_t						ft_nbrlenbasemax(t_uintmax nb, int base);
 size_t						ft_nbrlenmax(t_intmax nb);
-int							ft_open(char *path, int flag, char *parent);
+int							ft_open(char *path, int flag, int perm,
+								char *parent);
 int							ft_pow(int nb, int pow);
 void						ft_putbtreestr(t_btree *root);
 void						ft_putbtreearr(t_btree *root);
