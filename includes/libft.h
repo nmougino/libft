@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/09/03 20:38:36 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/09/04 19:55:53 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,8 @@ size_t						ft_lstlen(t_list *lst);
 t_list						*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list						*ft_lstnew(void const *content,
 								size_t content_size);
+void						ft_lstrem(t_list **lst, t_list *tar,
+								void (*del)(void *, size_t));
 char						**ft_lststrtotab(t_list *lst);
 void						**ft_lsttotab(t_list *lst);
 int							ft_max(int a, int b);

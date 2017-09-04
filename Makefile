@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/08/30 18:15:24 by nmougino         ###   ########.fr        #
+#    Updated: 2017/09/04 19:56:06 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SRC =		array/ft_arr_move_left_str.c \
 			list/ft_lstlen.c \
 			list/ft_lstmap.c \
 			list/ft_lstnew.c \
+			list/ft_lstrem.c \
 			list/ft_lststrtotab.c \
 			list/ft_lsttotab.c \
 			math/ft_abs.c \
