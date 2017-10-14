@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/09/04 21:35:41 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/10/14 23:45:07 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,42 +215,49 @@ int							get_next_line(int const fd, char **line);
 # define STR_EINVAL "Bad flag"
 # define STR_EIO "I/O error"
 # define STR_EISDIR "The patname given route to a directory"
-# define STR_ELOOP "Too many symbolic links encountered in translating the p\
-athname. Symbolic link loop suspected. OR O_NOFOLLOW is specified an\
-d the file is a symbolic link"
-# define STR_EMFILE "Too many file descriptor are already opened or the syst\
-em file table is full"
+# define STR_ELOOP_1 "Too many symbolic links encountered in translating the pa"
+# define STR_ELOOP_2 "thname. Symbolic link loop suspected. OR O_NOFOLLOW is sp"
+# define STR_ELOOP_3 "ecified and the file is a symbolic link"
+# define STR_ELOOP STR_ELOOP_1 STR_ELOOP_2 STR_ELOOP_3
+# define STR_EMFILE_1 "Too many file descriptor are already opened or the syst"
+# define STR_EMFILE STR_EMFILE_1 "em file table is full"
 # define STR_ENAMETOOLONG "The pathname is too long"
-# define STR_ENOENT "O_CREAT is not set and the named file does not exist. O\
-R a component of the path name does not exist"
+# define STR_ENOENT_1 "O_CREAT is not set and the named file does not exist. O"
+# define STR_ENOENT_2 "R a component of the path name does not exist"
+# define STR_ENOENT STR_ENOENT_1 STR_ENOENT_2
 # define STR_ENOSPC "Disk space full"
-# define STR_ENOTDIR "A component of the path prefix is not a directory. OR t\
-he path argument is not an absolute path and fd is nei\
-ther AT_FDCWD nor a file descriptor associated with a directory."
-# define STR_ENXIO "O_NONBLOCK and O_WRONLY are set, the file is a FIFO, an\
-d no process has it open for reading"
-# define STR_EOPNOTSUPP "O_SHLOCK or O_EXLOCK is specified, but the underlyin\
-g filesystem does not support locking. OR an attempt is made to ope\
-n a socket (not currently implemented)"
-# define STR_EOVERFLOW "The named file is a regular file and its size does n\
-ot fit in an object of type off_t."
-# define STR_EROFS "The named file resides on a read-only file system, and t\
-he file is to be modified."
-# define STR_ETXTBSY "The file is a pure procedure (shared text) file that i\
-s being executed and the open() call requests write access."
-# define STR_EBADF "The path argument does not specify an absolute path and t\
-he fd argument is neither AT_FDCWD nor a valid file descriptor open f\
-or searching."
+# define STR_ENOTDIR_1 "A component of the path prefix is not a directory. OR t"
+# define STR_ENOTDIR_2 "he path argument is not an absolute path and fd is neit"
+# define STR_ENOTDIR_3 "her AT_FDCWD nor a file descriptor associated with a di"
+# define STR_ENOTDIR STR_ENOTDIR_1 STR_ENOTDIR_2 STR_ENOTDIR_3 "rectory."
+# define STR_ENXIO_1 "O_NONBLOCK and O_WRONLY are set, the file is a FIFO, and "
+# define STR_ENXIO STR_ENXIO_1 "no process has it open for reading"
+# define STR_EOPNOTSUPP_1 "O_SHLOCK or O_EXLOCK is specified, but the underlyin"
+# define STR_EOPNOTSUPP_2 "g filesystem does not support locking. OR an attempt"
+# define STR_EOPNOTSUPP_3 " is made to open a socket (not currently implemented"
+# define STR_EOPNOTSUPP STR_EOPNOTSUPP_1 STR_EOPNOTSUPP_2 STR_EOPNOTSUPP_3 ")"
+# define STR_EOVERFLOW_1 "The named file is a regular file and its size does no"
+# define STR_EOVERFLOW STR_EOVERFLOW_1 "t fit in an object of type off_t."
+# define STR_EROFS_1 "The named file resides on a read-only file system, and th"
+# define STR_EROFS STR_EROFS_1 "e file is to be modified."
+# define STR_ETXTBSY_1 "The file is a pure procedure (shared text) file that is"
+# define STR_ETXTBSY_2 " being executed and the open() call requests write acce"
+# define STR_ETXTBSY STR_ETXTBSY_1 STR_ETXTBSY_2 "ss."
+# define STR_EBADF_1 "The path argument does not specify an absolute path and t"
+# define STR_EBADF_2 "he fd argument is neither AT_FDCWD nor a valid file descr"
+# define STR_EBADF STR_EBADF_1 STR_EBADF_2 "iptor open for searching."
 
 /*
 ** FOR FORK
 */
 
-# define FORK_EAGAIN "The system-imposed limit on the total number of process\
-es under execution would be exceeded.  This limit is configuration-dependent.\
-OR The system-imposed limit MAXUPRC (<sys/param.h>) on the total number of pro\
-cesses under execution by a single user would be exceeded."
-
+# define FORK_EAGAIN_1 "The system-imposed limit on the total number of process"
+# define FORK_EAGAIN_2 "es under execution would be exceeded.  This limit is co"
+# define FORK_EAGAIN_3 "nfiguration-dependent. OR The system-imposed limit MAXU"
+# define FORK_EAGAIN_4 "PRC (<sys/param.h>) on the total number of processes un"
+# define FORK_EAGAIN_5 "der execution by a single user would be exceeded."
+# define FORK_EAGAIN_6 FORK_EAGAIN_1 FORK_EAGAIN_2 FORK_EAGAIN_3 FORK_EAGAIN_4
+# define FORK_EAGAIN FORK_EAGAIN_6 FORK_EAGAIN_5
 # define FORK_ENOMEM "There is insufficient swap space for the new process."
 
 #endif
