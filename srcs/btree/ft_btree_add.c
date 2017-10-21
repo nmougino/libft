@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btreenew.c                                      :+:      :+:    :+:   */
+/*   ft_btree_add.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/20 17:20:32 by nmougino          #+#    #+#             */
-/*   Updated: 2017/10/21 13:36:31 by nmougino         ###   ########.fr       */
+/*   Created: 2017/10/21 13:48:42 by nmougino          #+#    #+#             */
+/*   Updated: 2017/10/21 14:11:11 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Cette fonction cree un nouveau noeud independant
-** en lui assignant le pointeur fourni
-** (aucune copie, elle l'assigne litteralement)
-*/
-
-t_btree	*ft_btreenew(void *data)
+void	ft_btree_add(t_btree *new, t_btree *parent, int side)
 {
-	t_btree	*ans;
-
-	if (!(ans = malloc(sizeof(t_btree))))
-		return (NULL);
-	ans->data = data;
-	ans->left = NULL;
-	ans->right = NULL;
-	ans->parent = NULL;
-	return (ans);
+	if (side == LEFT)
+		parent->left = new;
+	else
+		parent->right = new;
+	new->parent = parent;
 }

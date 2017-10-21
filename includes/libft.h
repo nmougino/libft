@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/10/14 23:45:07 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/10/21 13:52:52 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ typedef struct				s_btree
 {
 	struct s_btree			*left;
 	struct s_btree			*right;
+	struct s_btree			*parent;
 	void					*data;
 }							t_btree;
 
@@ -75,6 +76,8 @@ void						ft_btreedel(t_btree **r, void (*fun)(void *));
 void						ft_btreemap(t_btree **root,
 								void(*fun)(t_btree **t));
 t_btree						*ft_btreenew(void *data);
+void						ft_btree_add(t_btree *new,
+								t_btree *parent, int side);
 void						ft_btree_add_parent(t_btree **r, t_btree *new,
 								int side);
 t_btree						*ft_btree_find_parent(t_btree *r, t_btree *tar);

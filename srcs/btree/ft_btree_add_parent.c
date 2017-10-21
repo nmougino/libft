@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/03 18:30:13 by nmougino          #+#    #+#             */
-/*   Updated: 2017/08/29 13:01:35 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/10/21 14:12:12 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ void	ft_btree_add_parent(t_btree **r, t_btree *new, int side)
 		new->left = *r;
 	else
 		new->right = *r;
+	(*r)->parent = new;
 	*r = new;
 }

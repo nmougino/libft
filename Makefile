@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/09/04 19:56:06 by nmougino         ###   ########.fr        #
+#    Updated: 2017/10/21 14:10:16 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRC =		array/ft_arr_move_left_str.c \
 			array/ft_arrnglu.c \
 			array/ft_arrstrcpy.c \
 			array/ft_arrstrncpy.c \
+			btree/ft_btree_add.c \
 			btree/ft_btree_add_parent.c \
 			btree/ft_btree_find_parent.c \
 			btree/ft_btreedel.c \
