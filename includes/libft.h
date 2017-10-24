@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:46:12 by nmougino          #+#    #+#             */
-/*   Updated: 2017/10/21 13:52:52 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/10/24 23:02:10 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,7 +198,7 @@ void						ft_swapchar(char *a, char *b);
 void						ft_swapint(int *a, int *b);
 int							ft_tolower(int c);
 int							ft_toupper(int c);
-size_t						ft_wordlen(char *str, char *seps);
+size_t						ft_wordlen(char *str, int (*f)(char c));
 
 /*
 ** GNL FUNCTIONS
