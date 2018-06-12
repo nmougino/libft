@@ -102,7 +102,7 @@ char						**ft_linesplit(char *s, char c);
 void						ft_lstadd_top(t_list **alst, t_list *new);
 void						ft_lstadd_end(t_list **alst, t_list *new);
 void						ft_lstadd_sort(t_list **alst, t_list *new,
-								int (*sfun)(void *, void *));
+								int (*sfun)(t_list *, t_list *));
 void						ft_lstdel(t_list **alst,
 								void (*del)(void *, size_t));
 void						ft_lstiter(t_list *lst, void (*f)(t_list *elem));

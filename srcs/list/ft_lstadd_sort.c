@@ -18,7 +18,7 @@
 ** compare les maillons.
 */
 
-void	ft_lstadd_sort(t_list **alst, t_list *new, int (*sfun)(void *, void *))
+void	ft_lstadd_sort(t_list **alst, t_list *new, int (*sfun)(t_list *, t_list *))
 {
 	t_list	*tmp;
 
