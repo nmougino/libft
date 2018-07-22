@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:04:42 by nmougino          #+#    #+#             */
-/*   Updated: 2016/10/21 13:59:38 by nmougino         ###   ########.fr       */
+/*   Updated: 2018/07/22 21:47:12 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 ** compare les maillons.
 */
 
-void	ft_lstadd_sort(t_list **alst, t_list *new, int (*sfun)(t_list *, t_list *))
+void	ft_lstadd_sort(t_list **alst, t_list *new,
+		int (*sfun)(t_list *, t_list *))
 {
 	t_list	*tmp;
 
